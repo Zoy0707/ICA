@@ -5,7 +5,6 @@ export const eventMeta = {
   date: "Saturday, 9 May 2026",
   time: "10:00 AM – 4:00 PM",
   venue: "University of Melbourne, Parkville Campus",
-  venueNote: "Exact venue: TBD",
   hostedBy: "Hosted by the University of Melbourne FEIT",
   deliveredBy: "Delivered by Innovate Connect Alliance",
   supporters: ["SEEYA", "UoMCAN"],

@@ -34,9 +34,6 @@ export default function HeroSection() {
               <span className="rounded-full border border-slate-200 bg-white px-4 py-2">
                 {eventMeta.venue}
               </span>
-              <span className="rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-amber-700">
-                {eventMeta.venueNote}
-              </span>
             </div>
 
             <div className="mt-8 space-y-2 text-sm md:text-base">
