@@ -163,12 +163,6 @@ export default function FormSection() {
               >
                 Submit Interest
               </button>
-
-              <p className="text-xs leading-5 text-amber-700">
-                TODO: replace the Formspree action URL in{" "}
-                <code>src/data/event.ts</code> with your real Formspree endpoint
-                before deployment.
-              </p>
             </form>
           </div>
         </div>
