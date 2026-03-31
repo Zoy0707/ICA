@@ -240,7 +240,7 @@ export const formContent = {
     description:
       "Ready to compete? Submit your application through the official registration form.",
     buttonLabel: "Apply to Compete",
-    buttonHref: "https://formspree.io/f/mykbwrne",
+    buttonHref: "https://forms.gle/RuYURFUc7NrRRSvNA",
     note: "Applications are open to individuals and teams.",
   },
   eoiCard: {
@@ -298,7 +298,7 @@ export const footerContent = {
   description: "Apply now and turn your idea into something real.",
   primaryCta: {
     label: "Apply to Compete",
-    href: "https://formspree.io/f/mykbwrne",
+    href: "https://forms.gle/RuYURFUc7NrRRSvNA",
   },
   secondaryCta: {
     label: "Register Audience Interest",

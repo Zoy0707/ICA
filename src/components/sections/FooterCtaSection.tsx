@@ -21,7 +21,7 @@ export default function FooterCtaSection() {
                 href={footerContent.primaryCta.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:bg-slate-100"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium !text-slate-950 transition hover:bg-slate-100"
               >
                 {footerContent.primaryCta.label}
               </a>
@@ -35,7 +35,7 @@ export default function FooterCtaSection() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-white/5 p-6">
+          <div className="rounded-3xl border border-slate-700 bg-slate-700/90 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.22)]">
             <p className="text-sm font-medium uppercase tracking-[0.16em] text-slate-300">
               {footerContent.contactTitle}
             </p>
@@ -47,7 +47,7 @@ export default function FooterCtaSection() {
               {footerContent.contactEmail}
             </a>
 
-            <p className="mt-4 text-sm leading-6 text-slate-300">
+            <p className="mt-4 text-sm leading-6 text-slate-200">
               {footerContent.partnershipText}
             </p>
           </div>

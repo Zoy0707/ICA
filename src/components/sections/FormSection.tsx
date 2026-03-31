@@ -32,7 +32,7 @@ export default function FormSection() {
               href={formContent.competitorCard.buttonHref}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium !text-white transition hover:opacity-90"
             >
               {formContent.competitorCard.buttonLabel}
             </a>

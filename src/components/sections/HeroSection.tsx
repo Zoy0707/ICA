@@ -49,7 +49,7 @@ export default function HeroSection() {
                 href={eventMeta.primaryCta.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium !text-white transition hover:opacity-90 hover:!text-white"
               >
                 {eventMeta.primaryCta.label}
               </a>

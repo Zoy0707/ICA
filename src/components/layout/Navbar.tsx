@@ -28,7 +28,7 @@ export default function Navbar() {
           href={eventMeta.primaryCta.href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center rounded-full bg-slate-950 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
+          className="inline-flex items-center rounded-full bg-slate-950 px-4 py-2 text-sm font-medium !text-white transition hover:opacity-90 hover:!text-white"
         >
           {eventMeta.primaryCta.label}
         </a>
