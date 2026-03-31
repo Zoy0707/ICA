@@ -173,7 +173,7 @@ export const agendaContent = {
       regular: "Regular — AUD 30",
       earlyBirdDeadline: "Early Bird ends: 11:59 PM, 25 April 2026",
       regularDeadline: "Regular sales close: 11:59 PM, 8 May 2026",
-      note: "Ticket release details coming soon. Ticketing platform: TBD.",
+      note: "Ticket release details coming soon.",
     },
   },
 };
