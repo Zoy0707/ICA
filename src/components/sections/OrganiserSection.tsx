@@ -4,30 +4,47 @@ import { isCtaLive } from "@/data/ctaLinks";
 /** When true, shows Title / Gold / placeholder sponsor tiers. Hidden in UI for now; structure retained. */
 const SHOW_SPONSOR_TIER_PLACEHOLDERS = false;
 
-type LogoItem = {
+type SupportingLogoItem = {
   name: string;
   shortName: string;
   src: string;
+  /** External site; opens in a new tab when set. */
+  href?: string;
 };
 
-function LogoRow({ logos }: { logos: LogoItem[] }) {
+function SupportingLogoRow({ logos }: { logos: SupportingLogoItem[] }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-12 gap-y-6">
-      {logos.map((logo) => (
-        <div key={logo.name} className="flex items-center">
-          {logo.src ? (
-            <img
-              src={logo.src}
-              alt={logo.name}
-              className="h-10 w-auto object-contain opacity-95 md:h-12"
-            />
-          ) : (
-            <span className="text-sm font-semibold tracking-tight text-[#171727]">
-              {logo.shortName}
-            </span>
-          )}
-        </div>
-      ))}
+    <div className="flex flex-wrap items-center gap-x-16 gap-y-8">
+      {logos.map((logo) => {
+        const image = logo.src ? (
+          <img
+            src={logo.src}
+            alt={logo.name}
+            className="h-14 w-auto object-contain opacity-95 md:h-16"
+          />
+        ) : (
+          <span className="text-sm font-semibold tracking-tight text-[#171727]">
+            {logo.shortName}
+          </span>
+        );
+
+        return (
+          <div key={logo.name} className="flex items-center">
+            {logo.href ? (
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                {image}
+              </a>
+            ) : (
+              image
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -60,14 +77,30 @@ function SponsorSlots({
 }
 
 export default function OrganiserSection() {
-  const supportingSponsorLogos: LogoItem[] = [
-    ...brandAssets.supporterLogos,
-    brandAssets.additionalPartners[0],
-  ].map((item) => ({
-    name: item.name,
-    shortName: item.shortName,
-    src: item.src,
-  }));
+  const supportingSponsorLogos: SupportingLogoItem[] = [
+    {
+      name: brandAssets.supporterLogos[0].name,
+      shortName: brandAssets.supporterLogos[0].shortName,
+      src: brandAssets.supporterLogos[0].src,
+    },
+    {
+      name: brandAssets.supporterLogos[1].name,
+      shortName: brandAssets.supporterLogos[1].shortName,
+      src: brandAssets.supporterLogos[1].src,
+      href: "https://uomcan.org/",
+    },
+    {
+      name: "MLAI",
+      shortName: "MLAI",
+      src: "/logos/mlai-logo.jpeg",
+      href: "https://mlai.au/",
+    },
+    {
+      name: brandAssets.additionalPartners[0].name,
+      shortName: brandAssets.additionalPartners[0].shortName,
+      src: brandAssets.additionalPartners[0].src,
+    },
+  ];
 
   return (
     <section id="organiser" className="scroll-mt-24">
@@ -82,7 +115,7 @@ export default function OrganiserSection() {
               Supporting Sponsors
             </p>
             <div className="mt-5">
-              <LogoRow logos={supportingSponsorLogos} />
+              <SupportingLogoRow logos={supportingSponsorLogos} />
             </div>
           </div>
 
