@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Container from "@/components/layout/Container";
 import { brandAssets, eventMeta, heroV2Content } from "@/data/event";
-import { CTA_LINKS } from "@/data/ctaLinks";
 
 function LogoMark({
   src,
@@ -53,7 +52,6 @@ export default function HeroSection() {
   }, [visuals.length]);
 
   const activeVisual = visuals[activeVisualIndex] ?? visuals[0];
-  const audienceHref = CTA_LINKS.audience;
   const quickHighlights = [
     { title: "University-backed", description: "Hosted by UoM FEIT" },
     {
@@ -249,14 +247,12 @@ export default function HeroSection() {
                     </p>
                   </div>
                 </div>
-                <a
-                  href={audienceHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center self-start whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-sm font-medium !text-[#510A6B] shadow-[0_16px_42px_rgba(0,0,0,0.18)] transition hover:bg-[#F1F2FA]"
+                <span
+                  className="inline-flex cursor-not-allowed select-none items-center justify-center self-start whitespace-nowrap rounded-full border border-white/25 bg-white/25 px-5 py-2.5 text-sm font-medium text-white/85 shadow-none"
+                  aria-disabled="true"
                 >
-                  Register as Audience
-                </a>
+                  Coming Soon
+                </span>
               </div>
             </div>
           </div>

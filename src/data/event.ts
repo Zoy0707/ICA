@@ -196,8 +196,9 @@ export const agendaContent = {
       format: "Live Event",
       description:
         "Shortlisted teams pitch live, followed by awards, audience engagement, and networking.",
-      registerHref: CTA_LINKS.audience,
-      registerLabel: "Register as Audience",
+      registerHref: "",
+      registerLabel: "Coming Soon",
+      comingSoon: true,
       isDeadline: false,
     },
   ],
