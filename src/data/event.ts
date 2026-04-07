@@ -2,9 +2,10 @@ export const eventMeta = {
   title: "UoM Engineering & IT Innovation Competition 2026",
   subtitle:
     "A cross-disciplinary innovation challenge bringing together students, recent graduates, and early-stage builders to turn bold ideas into practical solutions.",
-  date: "Saturday, 9 May 2026",
-  time: "10:00 AM – 4:00 PM",
+  date: "9 May 2026",
+  time: "14:00–17:45",
   venue: "University of Melbourne, Parkville Campus",
+  venueSuffix: "Venue TBA",
   hostedBy: "Hosted by the University of Melbourne FEIT",
   deliveredBy: "Delivered by Innovate Connect Alliance",
   supporters: ["SEEYA", "UoMCAN"],
@@ -14,8 +15,12 @@ export const eventMeta = {
     href: "https://forms.gle/RuYURFUc7NrRRSvNA",
   },
   secondaryCta: {
-    label: "Register Audience Interest",
-    href: "#form",
+    label: "Join Info Session",
+    href: "#info-sessions",
+  },
+  sponsorCta: {
+    label: "Download Sponsor Package",
+    href: "#",
   },
 };
 
@@ -24,7 +29,6 @@ export const navItems = [
   { label: "Overview", href: "#overview" },
   { label: "Agenda", href: "#agenda" },
   { label: "Judges", href: "#judges" },
-  { label: "Register", href: "#form" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -102,18 +106,9 @@ export const highlightsContent = {
     },
   ],
   valueStats: [
-    {
-      label: "Hosted by",
-      value: "UoM FEIT",
-    },
-    {
-      label: "Finalist teams",
-      value: "12",
-    },
-    {
-      label: "Format",
-      value: "Individuals + teams",
-    },
+    { label: "Hosted by", value: "UoM FEIT" },
+    { label: "Finalist teams", value: "12" },
+    { label: "Format", value: "Individuals + teams" },
   ],
   finalDayTitle: "Planned Final Day experience",
   finalDayDescription:
@@ -138,42 +133,68 @@ export const agendaContent = {
     {
       step: "01",
       date: "10 Apr 2026",
-      title: "Team-Up Info Sessions",
-      format: "Separate session options available",
+      title: "Online Info Session",
+      format: "Online",
       description:
-        "Meet potential collaborators, ask questions, and find a clearer starting point before applying or building.",
+        "An online introduction to the competition, including key dates, participation format, judging expectations, and how to get started.",
+      registerHref: "#info-sessions",
+      registerLabel: "Register",
+      isDeadline: false,
     },
     {
       step: "02",
-      date: "22 Apr 2026",
-      title: "Pitch Workshop",
-      format: "Online via Zoom",
+      date: "18 Apr 2026",
+      title: "Onsite Team-Up Session",
+      format: "In person",
       description:
-        "A guided session to help teams strengthen positioning, structure, and presentation quality.",
+        "Meet potential collaborators in person, exchange ideas, and form cross-disciplinary teams ahead of submission.",
+      registerHref: "#info-sessions",
+      registerLabel: "Register",
+      isDeadline: false,
     },
     {
       step: "03",
-      date: "24 Apr 2026",
-      title: "Draft Submission",
-      format: "Review milestone",
+      date: "22 Apr 2026",
+      title: "Hybrid Pitch Workshop",
+      format: "Hybrid",
       description:
-        "Teams submit draft materials for evaluation and shortlisting consideration.",
+        "A practical workshop on how to structure, present, and communicate technical ideas effectively, available both onsite and online.",
+      registerHref: "#info-sessions",
+      registerLabel: "Register",
+      isDeadline: false,
     },
     {
       step: "04",
-      date: "1 May 2026",
-      title: "Final Submission",
-      format: "Final preparation milestone",
+      date: "24 Apr 2026",
+      title: "Draft Submission",
+      format: "Submission Deadline",
       description:
-        "Shortlisted teams prepare final materials and solution demonstrations ahead of the live event.",
+        "Teams submit a 5-page draft deck and a short demo progress update for review and shortlisting.",
+      registerHref: "",
+      registerLabel: "",
+      isDeadline: true,
     },
     {
       step: "05",
+      date: "1 May 2026",
+      title: "Final Submission",
+      format: "Submission Deadline",
+      description:
+        "Teams finalise and submit their full pitch deck and prototype or concept demonstration materials.",
+      registerHref: "",
+      registerLabel: "",
+      isDeadline: true,
+    },
+    {
+      step: "06",
       date: "9 May 2026",
       title: "Final Pitch Day",
-      format: "Live event + networking",
+      format: "Live event · 14:00–17:45",
       description:
-        "Selected teams present live and take part in the broader event experience, including showcase and networking.",
+        "Shortlisted teams present their solutions to judges, followed by industry insights, awards, and networking.",
+      registerHref: "#form",
+      registerLabel: "Register Audience Interest",
+      isDeadline: false,
     },
   ],
   submissionTitle: "Submission requirements",
@@ -207,6 +228,47 @@ export const agendaContent = {
       note: "Ticket release details coming soon. Ticketing platform: TBD.",
     },
   },
+  finalDayAgendaTitle: "Final Pitch Day · 9 May 2026",
+  finalDayAgenda: [
+    {
+      time: "14:00–14:15",
+      title: "Opening Remarks",
+      description: "Opening of Final Pitch Day",
+    },
+    {
+      time: "14:15–14:30",
+      title: "Industry Insight Talk",
+      description:
+        "A short industry talk exploring the current landscape and future direction of engineering and innovation.",
+    },
+    {
+      time: "14:30–15:45",
+      title: "First Pitching Session",
+      description: "",
+    },
+    {
+      time: "15:45–16:00",
+      title: "Break",
+      description: "15-minute intermission",
+    },
+    {
+      time: "16:00–17:00",
+      title: "Second Pitching Session",
+      description: "",
+    },
+    {
+      time: "17:00–17:15",
+      title: "Industry Reflection Talk",
+      description:
+        "A closing industry perspective on innovation, collaboration, and future opportunities.",
+    },
+    {
+      time: "17:15–17:45",
+      title: "Awards and Closing Celebration",
+      description:
+        "Recognising top teams and closing the event with a final celebration.",
+    },
+  ],
 };
 
 export const judgesContent = {
@@ -218,7 +280,7 @@ export const judgesContent = {
     {
       name: "Yifei Wang",
       title:
-        "Founder, AIBUILD & Global Elite School; Academic, University of Melbourne",
+        "Founder, AIBUILD & Global Elite School\nAcademic, University of Melbourne",
       expertise:
         "AI product strategy, applied innovation, and commercialisation",
       imageSrc: "/judges/yifei-wang.jpeg",
@@ -226,7 +288,7 @@ export const judgesContent = {
     },
     {
       name: "Shuangmin Shi",
-      title: "Lecturer in Engineering Management, The University of Melbourne",
+      title: "Lecturer in Engineering Management\nThe University of Melbourne",
       expertise:
         "Engineering management, systems thinking, and innovation education",
       imageSrc: "/judges/shuangmin-shi.jpeg",
@@ -235,7 +297,7 @@ export const judgesContent = {
     {
       name: "Pooria Pasbakhsh",
       title:
-        "R&D Material Scientist; Research Fellow and Adjunct Associate Professor",
+        "R&D Material Scientist\nResearch Fellow and Adjunct Associate Professor",
       expertise:
         "Materials research, technical evaluation, and interdisciplinary research translation",
       imageSrc: "/judges/pooria-pasbakhsh.jpeg",
@@ -245,167 +307,64 @@ export const judgesContent = {
   note: "More judges and guests may be announced.",
 };
 
-export const formContent = {
-  eyebrow: "Register",
-  title: "Choose the path that fits you best",
-  description:
-    "Whether you want to compete or stay close to the event as an audience member, partner, or sponsor, the next step should feel clear and easy.",
-  competeCard: {
-    eyebrow: "Compete",
-    title: "Apply to join the competition",
-    description:
-      "Submit your application through the official competition registration form. Individuals and teams are both welcome.",
-    bullets: [
-      "Open to individuals and teams",
-      "Competitor Pass — AUD 25",
-      "Includes Team-Up Info Sessions, Pitch Workshop, and Final Day entry",
-    ],
-    buttonLabel: "Apply to Compete",
-    buttonHref: "https://forms.gle/RuYURFUc7NrRRSvNA",
-  },
-  interestCard: {
-    eyebrow: "Register Interest",
-    title: "Audience, partnership, or sponsorship interest",
-    description:
-      "Use this form to receive audience ticket updates or express interest in supporting the event through partnership or sponsorship.",
-  },
-  formspreeAction: "https://formspree.io/f/YOUR_FORM_ID",
-  interestOptions: [
-    "Audience ticket updates",
-    "Partnership opportunities",
-    "Sponsorship opportunities",
-  ],
-};
-
 export const organiserContent = {
   eyebrow: "Organiser",
-  title: "Delivered by a university-connected innovation community",
-  description:
-    "The event is hosted by the University of Melbourne FEIT and delivered by Innovate Connect Alliance, with support from a wider community and partner network.",
-  summaryCards: [
-    {
-      label: "Host",
-      title: "University of Melbourne FEIT",
-      description:
-        "Provides the university-backed setting and institutional credibility for the competition.",
-    },
-    {
-      label: "Delivered by",
-      title: "Innovate Connect Alliance",
-      description:
-        "A community-led platform focused on innovation, collaboration, and professional connection across STEM and emerging industries.",
-    },
-  ],
-  supportTitle: "Community support",
-  supportDescription:
-    "The event also benefits from community supporters and future partner participation as the program grows.",
-  supportBadges: ["SEEYA", "UoMCAN", "More partners to be announced"],
+  title: "Organiser",
+  hostedByLabel: "Hosted by",
+  organisedByLabel: "Organised by",
+  supportersLabel: "Community Supporters",
+  sponsorTitle: "Interested in supporting the event?",
+  sponsorDescription:
+    "Download our sponsor package to learn more about partnership opportunities and event exposure.",
+  sponsorButtonLabel: "Download Sponsor Package",
+  sponsorButtonHref: "#",
 };
 
 export const footerContent = {
-  eyebrow: "Ready to join?",
-  title: "Take the next step",
-  description:
-    "Apply now, register your interest, or reach out if you would like to support the event as a partner or sponsor.",
+  eyebrow: "Ready to join the competition?",
+  title:
+    "Apply now and start building your idea with collaborators, mentors, and judges across disciplines.",
   primaryCta: {
     label: "Apply to Compete",
     href: "https://forms.gle/RuYURFUc7NrRRSvNA",
   },
   secondaryCta: {
-    label: "Register Interest",
-    href: "#form",
+    label: "Join Info Session",
+    href: "#info-sessions",
   },
-  contactTitle: "General enquiries",
+  contactTitle: "For partnerships, sponsorships, or general enquiries",
   contactEmail: "admin@innovateconnectalliance.org",
-  partnershipText:
-    "For partnerships or sponsorship interest, please get in touch by email.",
 };
 
 export const faqContent = [
   {
-    question: "Who can apply?",
-    answer:
-      "The competition is open to students, recent graduates, early-stage innovators, and aspiring builders across Australia. Both individuals and teams are welcome.",
-  },
-  {
     question: "Can I apply without a team?",
     answer:
-      "Yes. Individual applicants are welcome, and team formation support will be provided during the Team-Up Info Session.",
+      "Yes. Individual applications are welcome, and participants can form teams during the onsite Team-Up Session.",
   },
   {
-    question: "What is the target team size?",
-    answer: "Cross-disciplinary teams of 4–6 participants are encouraged.",
-  },
-  {
-    question: "What do I need to submit?",
+    question:
+      "What is the difference between the Info Session and the Team-Up Session?",
     answer:
-      "Draft submission requires a 5-page pitch deck and a demo progress update. Final submission requires a 10-page pitch deck and a prototype or concept demonstration.",
+      "The Online Info Session introduces the competition format and key details. The Onsite Team-Up Session is designed for networking, idea exchange, and team formation.",
   },
   {
-    question: "How are finalists selected?",
+    question: "Is the Pitch Workshop available online?",
     answer:
-      "All applicants submit a draft, and 12 finalist teams will be selected after review and invited to pitch live on Final Day.",
+      "Yes. The Pitch Workshop will be offered in a hybrid format, with both onsite and online participation options.",
   },
   {
-    question: "When will audience tickets be available?",
+    question: "What needs to be submitted for the draft round?",
     answer:
-      "Audience ticket release details are coming soon. You can register your interest through the website form to receive updates.",
+      "Teams need to submit a 5-page draft pitch deck together with a short demo progress update.",
   },
   {
-    question: "What details are still to be confirmed?",
+    question: "Where will the Final Pitch Day be held?",
     answer:
-      "The exact Final Day venue, ticketing platform, full final program, prize details, and any additional judges or guests are still to be confirmed.",
+      "The event will take place at the University of Melbourne, Parkville Campus. Exact venue details will be announced closer to the date.",
   },
 ];
 
-export const sectionOrder = [
-  {
-    id: "overview",
-    title: "Event Overview",
-    description:
-      "Clear explanation of the competition, audience, themes, and value proposition.",
-  },
-  {
-    id: "highlights",
-    title: "Highlights",
-    description:
-      "Why join, key selling points, and Final Day experience summary.",
-  },
-  {
-    id: "agenda",
-    title: "Agenda / Timeline",
-    description: "Key dates, competition process, and submission milestones.",
-  },
-  {
-    id: "judges",
-    title: "Speakers / Judges / Guests",
-    description:
-      "Confirmed judges now, with room for more speakers or guests later.",
-  },
-  {
-    id: "form",
-    title: "Registration Form",
-    description:
-      "Primary Google Form CTA for competitors and Formspree EOI for audience, partnerships, and sponsorships.",
-  },
-  {
-    id: "faq",
-    title: "FAQ",
-    description:
-      "Short accordion for common questions, including TBD items where details are not final.",
-  },
-  {
-    id: "organiser",
-    title: "Organiser / ICA",
-    description:
-      "Hosted by UoM FEIT, delivered by Innovate Connect Alliance, with community supporters.",
-  },
-  {
-    id: "footer-cta",
-    title: "Footer CTA",
-    description: "Final action block with competition CTA and contact options.",
-  },
-];
 export const brandAssets = {
   icaLogo: {
     name: "Innovate Connect Alliance",
@@ -486,25 +445,11 @@ export const heroV2Content = {
     },
   ],
   visualHighlight: {
-    eyebrow: "Final Day",
+    eyebrow: "Final Day · 9 May 2026",
     title: "Live pitches, judges, showcase, and networking",
   },
 };
 
-export const logoStripContent = [
-  {
-    label: "Hosted by",
-    logos: [brandAssets.feitLogo],
-  },
-  {
-    label: "Delivered by",
-    logos: [brandAssets.icaLogo],
-  },
-  {
-    label: "Supported by",
-    logos: [...brandAssets.supporterLogos, ...brandAssets.additionalPartners],
-  },
-];
 export const infoSessionsContent = {
   eyebrow: "Team-Up Info Sessions",
   title: "Choose a session and take the first step",
@@ -519,54 +464,29 @@ export const infoSessionsContent = {
   sessions: [
     {
       badge: "Session 1",
-      title: "[INSERT SESSION 1 TITLE]",
-      date: "[INSERT SESSION 1 DATE]",
-      time: "[INSERT SESSION 1 TIME]",
-      format: "[INSERT SESSION 1 FORMAT]",
-      description: "[INSERT SESSION 1 DESCRIPTION]",
+      title: "Online Info Session",
+      date: "10 Apr 2026",
+      time: "TBA",
+      format: "Online",
+      description:
+        "An online introduction to the competition, including key dates, participation format, judging expectations, and how to get started.",
       registerHref: "#",
       registerLinkPlaceholder: "[INSERT SESSION 1 LINK]",
     },
     {
       badge: "Session 2",
-      title: "[INSERT SESSION 2 TITLE]",
-      date: "[INSERT SESSION 2 DATE]",
-      time: "[INSERT SESSION 2 TIME]",
-      format: "[INSERT SESSION 2 FORMAT]",
-      description: "[INSERT SESSION 2 DESCRIPTION]",
+      title: "Onsite Team-Up Session",
+      date: "18 Apr 2026",
+      time: "TBA",
+      format: "In person",
+      description:
+        "Meet potential collaborators in person, exchange ideas, and form cross-disciplinary teams ahead of submission.",
       registerHref: "#",
       registerLinkPlaceholder: "[INSERT SESSION 2 LINK]",
     },
   ],
 };
-export const partnerWallContent = {
-  eyebrow: "Partners & Supporters",
-  title: "Backed by academic, community, and ecosystem partners",
-  description:
-    "A structured view of the organisations helping shape the event, support participation, and strengthen the broader community presence.",
-  groups: [
-    {
-      label: "Host",
-      description: "University-backed institutional support",
-      logos: [brandAssets.feitLogo],
-    },
-    {
-      label: "Delivered by",
-      description: "Event delivery and community coordination",
-      logos: [brandAssets.icaLogo],
-    },
-    {
-      label: "Community supporters",
-      description: "Community amplification and engagement support",
-      logos: [...brandAssets.supporterLogos],
-    },
-    {
-      label: "Additional partners",
-      description: "To be announced",
-      logos: [...brandAssets.additionalPartners],
-    },
-  ],
-};
+
 export const pastEventsContent = {
   eyebrow: "Past Events & Community",
   title: "A glimpse of the community behind the event",

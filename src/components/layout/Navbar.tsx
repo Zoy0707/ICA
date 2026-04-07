@@ -4,7 +4,7 @@ import { brandAssets, eventMeta, navItems } from "@/data/event";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#E3E6F0]/80 bg-white/70 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between gap-4">
         <a href="#top" className="min-w-0">
           <BrandLogo
@@ -21,7 +21,7 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-600 transition hover:text-slate-950"
+              className="text-sm font-medium text-[#5F6275] transition hover:text-[#171727]"
             >
               {item.label}
             </a>
@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#logo-strip"
-            className="hidden rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 md:inline-flex"
+            className="hidden rounded-full border border-[#E3E6F0] bg-white px-4 py-2 text-sm font-medium text-[#5F6275] transition hover:border-[#622BCF]/30 hover:bg-[#F1F2FA] md:inline-flex"
           >
             Trusted by
           </a>
@@ -40,7 +40,7 @@ export default function Navbar() {
             href={eventMeta.primaryCta.href}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center rounded-full bg-slate-950 px-5 py-2.5 text-sm font-medium !text-white transition hover:opacity-90 hover:!text-white"
+            className="inline-flex items-center rounded-full bg-[#6054FF] px-5 py-2.5 text-sm font-medium !text-white shadow-[0_10px_26px_rgba(96,84,255,0.22)] transition hover:bg-[#622BCF] hover:!text-white"
           >
             {eventMeta.primaryCta.label}
           </a>

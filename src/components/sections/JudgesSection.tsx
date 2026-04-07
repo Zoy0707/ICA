@@ -51,9 +51,15 @@ function JudgeCard({
           {name}
         </h3>
 
-        <p className="mt-3 text-sm leading-6 text-slate-600">{title}</p>
+        <div className="mt-3 space-y-0.5">
+          {title.split("\n").map((line, i) => (
+            <p key={i} className="text-sm leading-6 text-slate-600">
+              {line}
+            </p>
+          ))}
+        </div>
 
-        <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3">
+        <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50/70 px-4 py-3">
           <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
             Expertise
           </p>
