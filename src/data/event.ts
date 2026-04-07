@@ -552,3 +552,26 @@ export const logoStripContent = [
     logos: brandAssets.additionalPartners,
   },
 ];
+export const partnerWallContent = {
+  eyebrow: "Partners & Supporters",
+  title: "Community and institutional support behind the event",
+  description:
+    "Show supporting organisations, community partners, and relevant institutional backing to strengthen trust and credibility.",
+  groups: [
+    {
+      label: "Host / Institutional Support",
+      description:
+        "Core organisers and institutional affiliations connected to the event.",
+      logos: [brandAssets.icaLogo, brandAssets.feitLogo],
+    },
+    {
+      label: "Community & Supporting Partners",
+      description:
+        "Community groups and collaborators helping promote and support the event.",
+      logos: [
+        ...brandAssets.supporterLogos,
+        ...brandAssets.additionalPartners,
+      ],
+    },
+  ],
+} as const;
