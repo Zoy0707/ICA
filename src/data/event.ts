@@ -538,3 +538,17 @@ export const pastEventsContent = {
     },
   ],
 };
+export const logoStripContent = [
+  {
+    label: "Host / Institutional Support",
+    logos: [brandAssets.icaLogo, brandAssets.feitLogo],
+  },
+  {
+    label: "Community Partners",
+    logos: brandAssets.supporterLogos,
+  },
+  {
+    label: "Additional Partners",
+    logos: brandAssets.additionalPartners,
+  },
+];
