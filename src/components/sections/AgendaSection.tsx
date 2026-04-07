@@ -13,6 +13,8 @@ type TimelineItem = {
 
 function TimelineCard({ item }: { item: TimelineItem }) {
   const hasLink = item.registerHref && item.registerLabel;
+  const ctaLabel =
+    item.title === "Final Pitch Day" ? "Register as Audience" : item.registerLabel;
 
   return (
     <div className="rounded-[1.75rem] border border-[#E3E6F0] bg-white p-5 shadow-[0_16px_42px_rgba(23,23,39,0.06)] md:p-6">
@@ -44,7 +46,7 @@ function TimelineCard({ item }: { item: TimelineItem }) {
                 href={item.registerHref}
                 className="mt-4 inline-flex items-center justify-center rounded-full bg-[#6054FF] px-5 py-2 text-sm font-medium !text-white shadow-[0_12px_28px_rgba(96,84,255,0.22)] transition hover:bg-[#622BCF] hover:!text-white"
               >
-                {item.registerLabel}
+                {ctaLabel}
               </a>
             )}
 
@@ -79,6 +81,40 @@ export default function AgendaSection() {
           <p className="mt-4 text-base leading-7 text-[#5F6275] md:text-lg">
             {agendaContent.intro}
           </p>
+        </div>
+
+        <div
+          id="info-sessions"
+          className="mt-8 rounded-[1.75rem] border border-[#E3E6F0] bg-white/70 p-6 shadow-[0_16px_42px_rgba(23,23,39,0.05)] backdrop-blur"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#5F6275]">
+            Info sessions
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-[#E3E6F0] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(23,23,39,0.05)]">
+              <p className="text-base font-semibold tracking-tight text-[#171727]">
+                Online Info Session{" "}
+                <span className="font-medium text-[#622BCF]">(Free)</span>
+              </p>
+              <p className="mt-2 text-sm leading-6 text-[#5F6275] md:text-base">
+                A free introductory session covering the competition format,
+                key dates, participation process, judging expectations, and how
+                to get started.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[#E3E6F0] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(23,23,39,0.05)]">
+              <p className="text-base font-semibold tracking-tight text-[#171727]">
+                Onsite Team-Up Session{" "}
+                <span className="font-medium text-[#622BCF]">(Free)</span>
+              </p>
+              <p className="mt-2 text-sm leading-6 text-[#5F6275] md:text-base">
+                A free in-person session for meeting potential collaborators,
+                learning more about the competition, exchanging ideas, and
+                forming cross-disciplinary teams.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 space-y-4">

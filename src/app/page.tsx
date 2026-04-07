@@ -4,8 +4,6 @@ import AgendaSection from "@/components/sections/AgendaSection";
 import FaqSection from "@/components/sections/FaqSection";
 import FooterCtaSection from "@/components/sections/FooterCtaSection";
 import HeroSection from "@/components/sections/HeroSection";
-import HighlightsSection from "@/components/sections/HighlightsSection";
-import InfoSessionsSection from "@/components/sections/InfoSessionsSection";
 import JudgesSection from "@/components/sections/JudgesSection";
 import OrganiserSection from "@/components/sections/OrganiserSection";
 import OverviewSection from "@/components/sections/OverviewSection";
@@ -18,9 +16,7 @@ export default function HomePage() {
       <HeroSection />
 
       <Container className="space-y-6 py-10 md:space-y-8 md:py-12">
-        <InfoSessionsSection />
         <OverviewSection />
-        <HighlightsSection />
         <AgendaSection />
         <JudgesSection />
         <PastEventsSection />

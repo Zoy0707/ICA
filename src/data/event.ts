@@ -16,7 +16,7 @@ export const eventMeta = {
   },
   secondaryCta: {
     label: "Join Info Session",
-    href: "#info-sessions",
+    href: "#agenda",
   },
   sponsorCta: {
     label: "Download Sponsor Package",
@@ -29,6 +29,7 @@ export const navItems = [
   { label: "Overview", href: "#overview" },
   { label: "Agenda", href: "#agenda" },
   { label: "Judges", href: "#judges" },
+  { label: "Sponsor", href: "#organiser" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -222,7 +223,7 @@ export const agendaContent = {
     audience: {
       title: "Audience Tickets",
       earlyBird: "Early Bird — AUD 25",
-      regular: "Regular — AUD 30",
+      regular: "Regular — AUD 40",
       earlyBirdDeadline: "Early Bird ends: 11:59 PM, 25 April 2026",
       regularDeadline: "Regular sales close: 11:59 PM, 8 May 2026",
       note: "Ticket release details coming soon. Ticketing platform: TBD.",
@@ -330,7 +331,7 @@ export const footerContent = {
   },
   secondaryCta: {
     label: "Join Info Session",
-    href: "#info-sessions",
+    href: "#agenda",
   },
   contactTitle: "For partnerships, sponsorships, or general enquiries",
   contactEmail: "admin@innovateconnectalliance.org",
@@ -382,7 +383,7 @@ export const brandAssets = {
     {
       name: "SEEYA",
       shortName: "SEEYA",
-      src: "/logos/SeeYa.png",
+      src: "/logos/SeeYa.jpg",
       placeholder: "[PARTNER_LOGO_1]",
     },
     {
@@ -394,9 +395,9 @@ export const brandAssets = {
   ],
   additionalPartners: [
     {
-      name: "Additional Partner",
-      shortName: "P3",
-      src: "/logos/mate logo.png",
+      name: "MATE POWER",
+      shortName: "MATE",
+      src: "/logos/mate-power.jpg",
       placeholder: "[PARTNER_LOGO_3]",
     },
     {

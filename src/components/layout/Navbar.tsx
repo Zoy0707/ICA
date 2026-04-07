@@ -1,5 +1,4 @@
 import Container from "@/components/layout/Container";
-import BrandLogo from "@/components/ui/BrandLogo";
 import { brandAssets, eventMeta, navItems } from "@/data/event";
 
 export default function Navbar() {
@@ -7,12 +6,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-[#E3E6F0]/80 bg-white/70 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between gap-4">
         <a href="#top" className="min-w-0">
-          <BrandLogo
-            name={brandAssets.icaLogo.name}
-            shortName={brandAssets.icaLogo.shortName}
+          <img
             src={brandAssets.icaLogo.src}
-            compact
-            hideTextOnMobile
+            alt={brandAssets.icaLogo.name}
+            className="h-12 w-auto object-contain"
           />
         </a>
 
@@ -29,13 +26,6 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#logo-strip"
-            className="hidden rounded-full border border-[#E3E6F0] bg-white px-4 py-2 text-sm font-medium text-[#5F6275] transition hover:border-[#622BCF]/30 hover:bg-[#F1F2FA] md:inline-flex"
-          >
-            Trusted by
-          </a>
-
           <a
             href={eventMeta.primaryCta.href}
             target="_blank"
