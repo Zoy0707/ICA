@@ -428,19 +428,19 @@ export const heroV2Content = {
   visualCards: [
     {
       title: "Past event atmosphere",
-      subtitle: "Replace with community image",
+      subtitle: "",
       src: "/community/event-photo3.png",
       placeholder: "[PAST_EVENT_IMAGE_1]",
     },
     {
       title: "Networking and audience",
-      subtitle: "Replace with event image",
+      subtitle: "",
       src: "/community/event-photo4.jpg",
       placeholder: "[PAST_EVENT_IMAGE_2]",
     },
     {
       title: "Pitch and panel moments",
-      subtitle: "Replace with event image",
+      subtitle: "",
       src: "/community/event-photo1.png",
       placeholder: "[PAST_EVENT_IMAGE_3]",
     },
