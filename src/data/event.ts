@@ -612,7 +612,7 @@ export const pastEventsContent = {
     {
       title: "Team and community energy",
       subtitle: "",
-      src: "/community/event-photo6.JPG",
+      src: "/community/event-photo6.jpg",
       placeholder: "[PAST_EVENT_IMAGE_6]",
       size: "standard",
     },

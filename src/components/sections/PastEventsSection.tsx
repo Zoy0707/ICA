@@ -105,7 +105,7 @@ export default function PastEventsSection() {
 
           <div className="grid auto-rows-fr gap-5 lg:grid-cols-12">
             {pastEventsContent.items.map((item) => (
-              <GalleryCard key={item.placeholder} {...item} />
+              <GalleryCard key={item.placeholder} {...(item as GalleryItem)} />
             ))}
           </div>
         </div>
