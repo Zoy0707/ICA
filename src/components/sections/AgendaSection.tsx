@@ -1,4 +1,5 @@
-import { agendaContent } from "@/data/event";
+import { agendaContent, eventMeta } from "@/data/event";
+import { CTA_LINKS } from "@/data/ctaLinks";
 
 type TimelineItem = {
   step: string;
@@ -9,17 +10,24 @@ type TimelineItem = {
   registerHref: string;
   registerLabel: string;
   isDeadline: boolean;
+  comingSoon?: boolean;
 };
 
 function TimelineCard({ item }: { item: TimelineItem }) {
-  const hasLink = item.registerHref && item.registerLabel;
-  const ctaLabel =
-    item.title === "Final Pitch Day" ? "Register as Audience" : item.registerLabel;
+  const isComingSoon = item.comingSoon === true;
+  const hasLink =
+    !isComingSoon && Boolean(item.registerHref && item.registerLabel);
+
+  const datePill = (
+    <div className="shrink-0 self-start rounded-full border border-[#E3E6F0] bg-white px-4 py-2 text-sm font-semibold text-[#171727] shadow-[0_10px_22px_rgba(23,23,39,0.05)]">
+      {item.date}
+    </div>
+  );
 
   return (
     <div className="rounded-[1.75rem] border border-[#E3E6F0] bg-white p-5 shadow-[0_16px_42px_rgba(23,23,39,0.06)] md:p-6">
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <div className="flex gap-4">
+      <div className="flex flex-col gap-5 md:gap-6 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex min-w-0 flex-1 gap-4">
           <div
             className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-sm font-semibold shadow-[0_10px_22px_rgba(23,23,39,0.08)] ${
               item.isDeadline
@@ -30,7 +38,7 @@ function TimelineCard({ item }: { item: TimelineItem }) {
             {item.step}
           </div>
 
-          <div className="max-w-xl">
+          <div className="min-w-0 max-w-xl flex-1">
             <h4 className="text-xl font-semibold tracking-tight text-[#171727]">
               {item.title}
             </h4>
@@ -41,15 +49,6 @@ function TimelineCard({ item }: { item: TimelineItem }) {
               {item.description}
             </p>
 
-            {hasLink && (
-              <a
-                href={item.registerHref}
-                className="mt-4 inline-flex items-center justify-center rounded-full bg-[#6054FF] px-5 py-2 text-sm font-medium !text-white shadow-[0_12px_28px_rgba(96,84,255,0.22)] transition hover:bg-[#622BCF] hover:!text-white"
-              >
-                {ctaLabel}
-              </a>
-            )}
-
             {item.isDeadline && (
               <span className="mt-4 inline-flex items-center rounded-full border border-[#8BB082]/40 bg-[#8BB082]/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-[#171727]">
                 Submission Deadline
@@ -58,9 +57,32 @@ function TimelineCard({ item }: { item: TimelineItem }) {
           </div>
         </div>
 
-        <div className="shrink-0 rounded-full border border-[#E3E6F0] bg-white px-4 py-2 text-sm font-semibold text-[#171727] shadow-[0_10px_22px_rgba(23,23,39,0.05)]">
-          {item.date}
-        </div>
+        {hasLink || isComingSoon ? (
+          <div className="flex shrink-0 flex-col gap-3 pt-1 lg:w-[min(100%,14rem)] lg:items-end lg:pt-0.5">
+            <div className="flex w-full justify-end">{datePill}</div>
+            {hasLink ? (
+              <a
+                href={item.registerHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-full min-w-[12rem] items-center justify-center rounded-full bg-[#6054FF] px-6 py-3 text-base font-semibold !text-white shadow-[0_14px_34px_rgba(96,84,255,0.28)] transition hover:bg-[#622BCF] hover:!text-white"
+              >
+                {item.registerLabel}
+              </a>
+            ) : (
+              <span
+                className="inline-flex w-full min-w-[12rem] cursor-not-allowed select-none items-center justify-center rounded-full bg-[#6054FF]/45 px-6 py-3 text-base font-semibold text-white/90 opacity-90 shadow-none"
+                aria-disabled="true"
+              >
+                Coming Soon
+              </span>
+            )}
+          </div>
+        ) : (
+          <div className="flex shrink-0 justify-end sm:justify-start lg:justify-end">
+            {datePill}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -83,41 +105,7 @@ export default function AgendaSection() {
           </p>
         </div>
 
-        <div
-          id="info-sessions"
-          className="mt-8 rounded-[1.75rem] border border-[#E3E6F0] bg-white/70 p-6 shadow-[0_16px_42px_rgba(23,23,39,0.05)] backdrop-blur"
-        >
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#5F6275]">
-            Info sessions
-          </p>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#E3E6F0] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(23,23,39,0.05)]">
-              <p className="text-base font-semibold tracking-tight text-[#171727]">
-                Online Info Session{" "}
-                <span className="font-medium text-[#622BCF]">(Free)</span>
-              </p>
-              <p className="mt-2 text-sm leading-6 text-[#5F6275] md:text-base">
-                A free introductory session covering the competition format,
-                key dates, participation process, judging expectations, and how
-                to get started.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#E3E6F0] bg-white px-5 py-4 shadow-[0_12px_28px_rgba(23,23,39,0.05)]">
-              <p className="text-base font-semibold tracking-tight text-[#171727]">
-                Onsite Team-Up Session{" "}
-                <span className="font-medium text-[#622BCF]">(Free)</span>
-              </p>
-              <p className="mt-2 text-sm leading-6 text-[#5F6275] md:text-base">
-                A free in-person session for meeting potential collaborators,
-                learning more about the competition, exchanging ideas, and
-                forming cross-disciplinary teams.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 space-y-4">
+        <div id="info-sessions" className="mt-10 space-y-4 scroll-mt-24">
           {agendaContent.timeline.map((item) => (
             <TimelineCard key={item.step} item={item} />
           ))}
@@ -125,7 +113,10 @@ export default function AgendaSection() {
       </div>
 
       {/* Final Pitch Day agenda */}
-      <div className="rounded-[2rem] border border-[#622BCF]/25 bg-[radial-gradient(circle_at_top_right,_rgba(96,84,255,0.24),_transparent_42%),linear-gradient(135deg,_#510A6B,_#171727)] p-6 text-white shadow-[0_30px_86px_rgba(81,10,107,0.25)] md:p-8 lg:p-10">
+      <div
+        id="final-day-agenda"
+        className="scroll-mt-24 rounded-[2rem] border border-[#622BCF]/25 bg-[radial-gradient(circle_at_top_right,_rgba(96,84,255,0.24),_transparent_42%),linear-gradient(135deg,_#510A6B,_#171727)] p-6 text-white shadow-[0_30px_86px_rgba(81,10,107,0.25)] md:p-8 lg:p-10"
+      >
         <div className="grid gap-8 lg:grid-cols-[0.4fr_1fr] lg:items-start">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/70">
@@ -227,18 +218,28 @@ export default function AgendaSection() {
 
           <div className="mt-5 space-y-4">
             <div className="rounded-2xl border border-[#622BCF]/25 bg-[linear-gradient(135deg,_#510A6B,_#171727)] p-5 text-white shadow-[0_20px_60px_rgba(81,10,107,0.18)]">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h4 className="text-base font-semibold text-white">
-                    {agendaContent.pricing.competitor.title}
-                  </h4>
-                  <p className="mt-2 text-sm leading-6 text-white/70">
-                    {agendaContent.pricing.competitor.description}
-                  </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-base font-semibold text-white">
+                      {agendaContent.pricing.competitor.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-white/70">
+                      {agendaContent.pricing.competitor.description}
+                    </p>
+                  </div>
+                  <div className="shrink-0 whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#171727]">
+                    {agendaContent.pricing.competitor.price}
+                  </div>
                 </div>
-                <div className="whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#171727]">
-                  {agendaContent.pricing.competitor.price}
-                </div>
+                <a
+                  href={eventMeta.primaryCta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-full min-h-[44px] items-center justify-center rounded-full bg-[#6054FF] px-6 py-3 text-base font-semibold !text-white shadow-[0_14px_34px_rgba(96,84,255,0.35)] transition hover:bg-[#622BCF] hover:!text-white"
+                >
+                  Apply to Compete
+                </a>
               </div>
             </div>
 
@@ -254,6 +255,17 @@ export default function AgendaSection() {
                 <div className="rounded-2xl border border-[#E3E6F0] bg-white px-4 py-3 text-sm font-medium text-[#171727] shadow-[0_12px_28px_rgba(23,23,39,0.05)]">
                   {agendaContent.pricing.audience.regular}
                 </div>
+              </div>
+
+              <div className="mt-4 flex w-full sm:justify-start">
+                <a
+                  href={CTA_LINKS.audience}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-full min-h-[44px] items-center justify-center rounded-full border border-[#6054FF]/35 bg-white px-5 py-2.5 text-sm font-semibold text-[#6054FF] shadow-[0_10px_26px_rgba(96,84,255,0.12)] transition hover:border-[#622BCF]/50 hover:bg-[#6054FF]/5 sm:w-auto sm:min-w-[12rem]"
+                >
+                  Register as Audience
+                </a>
               </div>
 
               <div className="mt-4 space-y-1.5 text-sm text-[#5F6275]">

@@ -1,3 +1,5 @@
+import { CTA_LINKS } from "./ctaLinks";
+
 export const eventMeta = {
   title: "UoM Engineering & IT Innovation Competition 2026",
   subtitle:
@@ -12,69 +14,68 @@ export const eventMeta = {
   competitionDeadline: "11:59 PM, 10 April 2026",
   primaryCta: {
     label: "Apply to Compete",
-    href: "https://forms.gle/RuYURFUc7NrRRSvNA",
+    href: CTA_LINKS.compete,
   },
   secondaryCta: {
     label: "Join Info Session",
-    href: "#agenda",
+    href: CTA_LINKS.infoSession,
   },
   sponsorCta: {
     label: "Download Sponsor Package",
-    href: "#",
+    href: CTA_LINKS.sponsorPackage,
   },
 };
 
 export const navItems = [
-  { label: "Sessions", href: "#info-sessions" },
   { label: "Overview", href: "#overview" },
-  { label: "Agenda", href: "#agenda" },
+  { label: "Sessions", href: "#info-sessions" },
+  { label: "Agenda", href: "#final-day-agenda" },
   { label: "Judges", href: "#judges" },
-  { label: "Sponsor", href: "#organiser" },
   { label: "FAQ", href: "#faq" },
+  { label: "Sponsor", href: "#organiser" },
 ];
 
 export const overviewContent = {
   eyebrow: "Why Join",
-  title: "Built for practical ideas, strong collaboration, and real visibility",
+  title: "Practical ideas, strong teams, real visibility",
   intro:
-    "This competition brings together students, recent graduates, and early-stage builders to turn ambitious ideas into practical solutions with real-world relevance.",
-  audienceTitle: "Who it is for",
-  audience: [
-    "Students across Australia",
-    "Recent graduates",
-    "Early-stage innovators",
-    "Aspiring founders and builders",
-    "Cross-disciplinary problem-solvers",
+    "A university-backed competition for students and early-stage builders who want to turn ideas into real solutions.",
+  whyJoinHighlights: [
+    {
+      title: "Practical Challenge",
+      body: "Work on ideas that solve real problems and can be clearly tested, explained, and presented.",
+    },
+    {
+      title: "Cross-Disciplinary Teams",
+      body: "Collaborate with people from different backgrounds and build stronger solutions together.",
+    },
+    {
+      title: "Judge Visibility",
+      body: "Gain feedback and exposure in front of judges, academics, and a wider innovation audience.",
+    },
   ],
-  formatTitle: "Participation format",
-  participation: [
-    "Open to both individuals and teams",
-    "Cross-disciplinary teams are strongly encouraged",
-    "Team formation support is available through the Team-Up Info Sessions",
-    "Recommended team size: 4–6 participants",
-  ],
-  themesTitle: "Challenge themes",
-  themesSubtitle: "Four areas for bold and relevant innovation ideas.",
+  competitionThemeEyebrow: "Competition Theme",
+  competitionThemeTitle: "Innovate Melbourne Future",
+  competitionThemeIntro:
+    "This year's challenge invites participants to develop practical solutions for a smarter, more sustainable, and more connected Melbourne.",
   themes: [
     {
-      title: "AI",
+      title: "Smart City & Infrastructure",
       description:
-        "Explore applied AI ideas with real-world value across industries, systems, and user needs.",
+        "Design solutions that improve urban systems, infrastructure, and the way cities function.",
+      icon: "city",
     },
     {
-      title: "Sustainability",
+      title: "AI & Digital System",
       description:
-        "Develop solutions that support environmental responsibility, efficiency, and long-term impact.",
+        "Apply data, AI, and digital technologies to create smarter and more efficient systems.",
+      icon: "ai",
     },
     {
-      title: "Infrastructure",
+      title: "Sustainable Energy & Climate Tech",
       description:
-        "Rethink how technology can improve the systems, services, and spaces that support modern life.",
-    },
-    {
-      title: "Emerging Technologies",
-      description:
-        "Experiment with forward-looking tools and concepts with future potential.",
+        "Develop innovations that support clean energy, sustainability, and environmental resilience.",
+      icon: "climate",
     },
   ],
 };
@@ -128,7 +129,7 @@ export const agendaContent = {
   eyebrow: "Competition Journey",
   title: "A clear path from first step to Final Day",
   intro:
-    "The competition is designed as a staged journey that helps participants move from interest and team formation through to submission, shortlisting, and live pitching.",
+    "Follow the key milestones from info sessions and workshops through to submission and live pitching.",
   timelineTitle: "Key stages",
   timeline: [
     {
@@ -137,8 +138,8 @@ export const agendaContent = {
       title: "Online Info Session",
       format: "Online",
       description:
-        "An online introduction to the competition, including key dates, participation format, judging expectations, and how to get started.",
-      registerHref: "#info-sessions",
+        "A free introductory session covering the competition format, key dates, judging expectations, and how to get started.",
+      registerHref: CTA_LINKS.infoSession,
       registerLabel: "Register",
       isDeadline: false,
     },
@@ -148,9 +149,10 @@ export const agendaContent = {
       title: "Onsite Team-Up Session",
       format: "In person",
       description:
-        "Meet potential collaborators in person, exchange ideas, and form cross-disciplinary teams ahead of submission.",
-      registerHref: "#info-sessions",
-      registerLabel: "Register",
+        "A free in-person session for meeting potential collaborators, learning more about the competition, and forming cross-disciplinary teams.",
+      registerHref: "",
+      registerLabel: "Coming Soon",
+      comingSoon: true,
       isDeadline: false,
     },
     {
@@ -159,9 +161,10 @@ export const agendaContent = {
       title: "Hybrid Pitch Workshop",
       format: "Hybrid",
       description:
-        "A practical workshop on how to structure, present, and communicate technical ideas effectively, available both onsite and online.",
-      registerHref: "#info-sessions",
-      registerLabel: "Register",
+        "A practical workshop on how to structure, present, and communicate technical ideas effectively.",
+      registerHref: "",
+      registerLabel: "Coming Soon",
+      comingSoon: true,
       isDeadline: false,
     },
     {
@@ -190,11 +193,11 @@ export const agendaContent = {
       step: "06",
       date: "9 May 2026",
       title: "Final Pitch Day",
-      format: "Live event · 14:00–17:45",
+      format: "Live Event",
       description:
-        "Shortlisted teams present their solutions to judges, followed by industry insights, awards, and networking.",
-      registerHref: "#form",
-      registerLabel: "Register Audience Interest",
+        "Shortlisted teams pitch live, followed by awards, audience engagement, and networking.",
+      registerHref: CTA_LINKS.audience,
+      registerLabel: "Register as Audience",
       isDeadline: false,
     },
   ],
@@ -318,7 +321,7 @@ export const organiserContent = {
   sponsorDescription:
     "Download our sponsor package to learn more about partnership opportunities and event exposure.",
   sponsorButtonLabel: "Download Sponsor Package",
-  sponsorButtonHref: "#",
+  sponsorButtonHref: CTA_LINKS.sponsorPackage,
 };
 
 export const footerContent = {
@@ -327,11 +330,11 @@ export const footerContent = {
     "Apply now and start building your idea with collaborators, mentors, and judges across disciplines.",
   primaryCta: {
     label: "Apply to Compete",
-    href: "https://forms.gle/RuYURFUc7NrRRSvNA",
+    href: CTA_LINKS.compete,
   },
   secondaryCta: {
     label: "Join Info Session",
-    href: "#agenda",
+    href: CTA_LINKS.infoSession,
   },
   contactTitle: "For partnerships, sponsorships, or general enquiries",
   contactEmail: "admin@innovateconnectalliance.org",
@@ -471,8 +474,8 @@ export const infoSessionsContent = {
       format: "Online",
       description:
         "An online introduction to the competition, including key dates, participation format, judging expectations, and how to get started.",
-      registerHref: "#",
-      registerLinkPlaceholder: "[INSERT SESSION 1 LINK]",
+      registerHref: CTA_LINKS.infoSession,
+      registerLinkPlaceholder: "",
     },
     {
       badge: "Session 2",
@@ -482,8 +485,8 @@ export const infoSessionsContent = {
       format: "In person",
       description:
         "Meet potential collaborators in person, exchange ideas, and form cross-disciplinary teams ahead of submission.",
-      registerHref: "#",
-      registerLinkPlaceholder: "[INSERT SESSION 2 LINK]",
+      registerHref: CTA_LINKS.teamUp,
+      registerLinkPlaceholder: "",
     },
   ],
 };
@@ -493,7 +496,7 @@ export const pastEventsContent = {
   title: "A glimpse of the community behind the event",
   description:
     "Use this section to show real event atmosphere, community energy, and the kind of engagement participants can expect around the competition.",
-  note: "Replace these placeholders with a curated selection of past event photos to strengthen trust and make the landing page feel more alive.",
+  note: "",
   items: [
     {
       title: "Community moments",

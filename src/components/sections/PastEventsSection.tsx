@@ -95,12 +95,6 @@ export default function PastEventsSection() {
             <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">
               {pastEventsContent.description}
             </p>
-
-            <div className="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
-              <p className="text-sm leading-6 text-slate-600">
-                {pastEventsContent.note}
-              </p>
-            </div>
           </div>
 
           <div className="grid auto-rows-fr gap-5 lg:grid-cols-12">

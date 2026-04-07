@@ -18,13 +18,15 @@ export default function FooterCtaSection() {
               href={footerContent.primaryCta.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[#171727] shadow-[0_16px_42px_rgba(0,0,0,0.22)] transition hover:bg-[#F1F2FA]"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium !text-[#510A6B] shadow-[0_16px_42px_rgba(0,0,0,0.22)] transition hover:bg-[#F1F2FA]"
             >
               {footerContent.primaryCta.label}
             </a>
 
             <a
               href={footerContent.secondaryCta.href}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:border-white/30 hover:bg-white/10"
             >
               {footerContent.secondaryCta.label}

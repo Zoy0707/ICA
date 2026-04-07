@@ -1,4 +1,5 @@
 import { infoSessionsContent } from "@/data/event";
+import { isCtaLive } from "@/data/ctaLinks";
 
 type SessionCardProps = {
   badge: string;
@@ -21,7 +22,7 @@ function SessionCard({
   registerHref,
   registerLinkPlaceholder,
 }: SessionCardProps) {
-  const hasRealLink = registerHref && registerHref !== "#";
+  const hasRealLink = isCtaLive(registerHref);
 
   return (
     <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm md:p-7">
@@ -82,15 +83,15 @@ function SessionCard({
             disabled
             className="inline-flex cursor-not-allowed items-center justify-center rounded-full bg-slate-950/80 px-6 py-3 text-sm font-medium text-white opacity-80"
           >
-            Registration link coming soon
+            Coming Soon
           </button>
         )}
 
-        {!hasRealLink && (
+        {!hasRealLink && registerLinkPlaceholder ? (
           <p className="mt-3 text-xs leading-5 text-slate-500">
             Placeholder link: {registerLinkPlaceholder}
           </p>
-        )}
+        ) : null}
       </div>
     </div>
   );
