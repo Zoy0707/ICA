@@ -4,7 +4,7 @@ export const CTA_LINKS = {
   infoSession: "https://lnkd.in/g9YDKz_R",
   teamUp: "TBD",
   pitchWorkshop: "TBD",
-  audience: "TBD",
+  audience: "https://luma.com/27lmvnsj",
   sponsorPackage: "/files/ICA-Sponsorship-Package.pdf",
 } as const;
 

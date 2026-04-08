@@ -1,4 +1,5 @@
 import { agendaContent, eventMeta } from "@/data/event";
+import { CTA_LINKS } from "@/data/ctaLinks";
 
 type TimelineItem = {
   step: string;
@@ -257,12 +258,14 @@ export default function AgendaSection() {
               </div>
 
               <div className="mt-4 flex w-full sm:justify-start">
-                <span
-                  className="inline-flex w-full min-h-[44px] cursor-not-allowed select-none items-center justify-center rounded-full border border-[#E3E6F0] bg-[#F1F2FA] px-5 py-2.5 text-sm font-semibold text-[#5F6275] sm:w-auto sm:min-w-[12rem]"
-                  aria-disabled="true"
+                <a
+                  href={CTA_LINKS.audience}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-full min-h-[44px] items-center justify-center rounded-full border border-[#6054FF]/35 bg-white px-5 py-2.5 text-sm font-semibold text-[#6054FF] shadow-[0_10px_26px_rgba(96,84,255,0.12)] transition hover:border-[#622BCF]/50 hover:bg-[#6054FF]/5 sm:w-auto sm:min-w-[12rem]"
                 >
-                  Coming Soon
-                </span>
+                  Register as Audience
+                </a>
               </div>
 
               <div className="mt-4 space-y-1.5 text-sm text-[#5F6275]">
