@@ -177,6 +177,28 @@ export const agendaContent = {
     },
     {
       step: "04",
+      date: "24 Apr 2026",
+      title: "Draft Submission",
+      format: "Submission Deadline",
+      description:
+        "Teams submit a 5-page draft deck and a short demo progress update for review and shortlisting.",
+      registerHref: "",
+      registerLabel: "",
+      isDeadline: true,
+    },
+    {
+      step: "05",
+      date: "1 May 2026",
+      title: "Final Submission",
+      format: "Submission Deadline",
+      description:
+        "Teams finalise and submit their full pitch deck and prototype or concept demonstration materials.",
+      registerHref: "",
+      registerLabel: "",
+      isDeadline: true,
+    },
+    {
+      step: "06",
       date: "9 May 2026",
       title: "Final Pitch Day",
       format: "Live Event",
