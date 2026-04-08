@@ -12,15 +12,21 @@ type SupportingLogoItem = {
   href?: string;
 };
 
-function SupportingLogoRow({ logos }: { logos: SupportingLogoItem[] }) {
+function SupportingLogoRow({
+  logos,
+  logoClassName = "h-12 w-auto object-contain opacity-95 md:h-14",
+}: {
+  logos: SupportingLogoItem[];
+  logoClassName?: string;
+}) {
   return (
-    <div className="flex flex-wrap items-center gap-x-16 gap-y-8">
+    <div className="flex flex-wrap items-center gap-x-12 gap-y-6 md:gap-x-14 md:gap-y-7">
       {logos.map((logo) => {
         const image = logo.src ? (
           <img
             src={logo.src}
             alt={logo.name}
-            className="h-14 w-auto object-contain opacity-95 md:h-16"
+            className={logoClassName}
           />
         ) : (
           <span className="text-sm font-semibold tracking-tight text-[#171727]">
@@ -77,16 +83,20 @@ function SponsorSlots({
 }
 
 export default function OrganiserSection() {
-  const supportingSponsorLogos: SupportingLogoItem[] = [
+  const diamondSponsor: SupportingLogoItem[] = [
     {
-      name: brandAssets.supporterLogos[0].name,
-      shortName: brandAssets.supporterLogos[0].shortName,
-      src: brandAssets.supporterLogos[0].src,
+      name: "AIBUILD",
+      shortName: "AIBUILD",
+      src: "/logos/aibuild-logo.png",
+      href: "https://www.aibuild.com/",
     },
+  ];
+
+  const supportingSponsorLogos: SupportingLogoItem[] = [
     {
       name: brandAssets.supporterLogos[1].name,
       shortName: brandAssets.supporterLogos[1].shortName,
-      src: brandAssets.supporterLogos[1].src,
+      src: "/logos/UoMCAN-logo.png",
       href: "https://uomcan.org/",
     },
     {
@@ -96,9 +106,25 @@ export default function OrganiserSection() {
       href: "https://mlai.au/",
     },
     {
+      name: brandAssets.supporterLogos[0].name,
+      shortName: brandAssets.supporterLogos[0].shortName,
+      src: brandAssets.supporterLogos[0].src,
+    },
+    {
       name: brandAssets.additionalPartners[0].name,
       shortName: brandAssets.additionalPartners[0].shortName,
       src: brandAssets.additionalPartners[0].src,
+    },
+    {
+      name: "Future Mind",
+      shortName: "Future Mind",
+      src: "",
+    },
+    {
+      name: "GES",
+      shortName: "GES",
+      src: "/logos/GES-logo.jpg",
+      href: "https://globalelite.school/",
     },
   ];
 
@@ -109,12 +135,24 @@ export default function OrganiserSection() {
           Sponsors
         </h2>
 
-        <div className="mt-10 space-y-10">
+        <div className="mt-10 space-y-8 md:space-y-9">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#171727]">
+              Exclusive Title Sponsor
+            </p>
+            <div className="mt-4 border-b border-[#E3E6F0] pb-7 md:pb-8">
+              <SupportingLogoRow
+                logos={diamondSponsor}
+                logoClassName="h-24 w-auto object-contain opacity-100 md:h-28 lg:h-32"
+              />
+            </div>
+          </div>
+
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#5F6275]">
               Supporting Sponsors
             </p>
-            <div className="mt-5">
+            <div className="mt-4">
               <SupportingLogoRow logos={supportingSponsorLogos} />
             </div>
           </div>
