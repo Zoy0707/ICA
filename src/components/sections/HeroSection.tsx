@@ -119,7 +119,7 @@ export default function HeroSection() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-[#E3E6F0] bg-white px-6 py-3 text-sm font-medium text-[#171727] shadow-[0_10px_26px_rgba(23,23,39,0.05)] transition hover:border-[#622BCF]/30 hover:bg-[#F1F2FA]"
               >
-                {eventMeta.secondaryCta.label}
+                Join Info Session for Free
               </a>
             </div>
 

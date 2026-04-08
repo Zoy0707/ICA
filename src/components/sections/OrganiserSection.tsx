@@ -92,13 +92,7 @@ export default function OrganiserSection() {
     },
   ];
 
-  const supportingSponsorLogos: SupportingLogoItem[] = [
-    {
-      name: brandAssets.supporterLogos[1].name,
-      shortName: brandAssets.supporterLogos[1].shortName,
-      src: "/logos/UoMCAN-logo.png",
-      href: "https://uomcan.org/",
-    },
+  const communityPartnerLogos: SupportingLogoItem[] = [
     {
       name: "MLAI",
       shortName: "MLAI",
@@ -106,9 +100,23 @@ export default function OrganiserSection() {
       href: "https://mlai.au/",
     },
     {
+      name: "CSA",
+      shortName: "CSA",
+      src: "/logos/csa-logo.jpg",
+    },
+    {
       name: brandAssets.supporterLogos[0].name,
       shortName: brandAssets.supporterLogos[0].shortName,
       src: brandAssets.supporterLogos[0].src,
+    },
+  ];
+
+  const supportingSponsorLogos: SupportingLogoItem[] = [
+    {
+      name: brandAssets.supporterLogos[1].name,
+      shortName: brandAssets.supporterLogos[1].shortName,
+      src: "/logos/UoMCAN-logo.png",
+      href: "https://uomcan.org/",
     },
     {
       name: brandAssets.additionalPartners[0].name,
@@ -145,6 +153,15 @@ export default function OrganiserSection() {
                 logos={diamondSponsor}
                 logoClassName="h-24 w-auto object-contain opacity-100 md:h-28 lg:h-32"
               />
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#5F6275]">
+              Community Partners
+            </p>
+            <div className="mt-4">
+              <SupportingLogoRow logos={communityPartnerLogos} />
             </div>
           </div>
 

@@ -8,6 +8,7 @@ import JudgesSection from "@/components/sections/JudgesSection";
 import OrganiserSection from "@/components/sections/OrganiserSection";
 import OverviewSection from "@/components/sections/OverviewSection";
 import PastEventsSection from "@/components/sections/PastEventsSection";
+import VolunteerSection from "@/components/sections/VolunteerSection";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
         <AgendaSection />
         <JudgesSection />
         <PastEventsSection />
+        <VolunteerSection />
         <FaqSection />
         <OrganiserSection />
         <FooterCtaSection />

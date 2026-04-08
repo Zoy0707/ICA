@@ -7,16 +7,21 @@ type TimelineItem = {
   title: string;
   format: string;
   description: string;
+  eligibilityNote?: string;
   registerHref: string;
   registerLabel: string;
   isDeadline: boolean;
   comingSoon?: boolean;
+  statusOnly?: boolean;
 };
 
 function TimelineCard({ item }: { item: TimelineItem }) {
+  const isStatusOnly = item.statusOnly === true;
   const isComingSoon = item.comingSoon === true;
   const hasLink =
-    !isComingSoon && Boolean(item.registerHref && item.registerLabel);
+    !isComingSoon &&
+    !isStatusOnly &&
+    Boolean(item.registerHref && item.registerLabel);
 
   const datePill = (
     <div className="shrink-0 self-start rounded-full border border-[#E3E6F0] bg-white px-4 py-2 text-sm font-semibold text-[#171727] shadow-[0_10px_22px_rgba(23,23,39,0.05)]">
@@ -48,6 +53,11 @@ function TimelineCard({ item }: { item: TimelineItem }) {
             <p className="mt-3 text-sm leading-6 text-[#5F6275] md:text-base">
               {item.description}
             </p>
+            {item.eligibilityNote ? (
+              <p className="mt-3 rounded-xl border border-[#E3E6F0] bg-[#F7F8FC] px-3 py-2 text-xs font-medium leading-5 text-[#5F6275]">
+                {item.eligibilityNote}
+              </p>
+            ) : null}
 
             {item.isDeadline && (
               <span className="mt-4 inline-flex items-center rounded-full border border-[#8BB082]/40 bg-[#8BB082]/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-[#171727]">
@@ -57,7 +67,7 @@ function TimelineCard({ item }: { item: TimelineItem }) {
           </div>
         </div>
 
-        {hasLink || isComingSoon ? (
+        {hasLink || isComingSoon || isStatusOnly ? (
           <div className="flex shrink-0 flex-col gap-3 pt-1 lg:w-[min(100%,14rem)] lg:items-end lg:pt-0.5">
             <div className="flex w-full justify-end">{datePill}</div>
             {hasLink ? (
@@ -69,6 +79,13 @@ function TimelineCard({ item }: { item: TimelineItem }) {
               >
                 {item.registerLabel}
               </a>
+            ) : isStatusOnly ? (
+              <span
+                className="inline-flex w-full min-w-[12rem] cursor-default select-none items-center justify-center rounded-full border border-[#E3E6F0] bg-[#F1F2FA] px-6 py-3 text-sm font-semibold text-[#5F6275]"
+                aria-disabled="true"
+              >
+                {item.registerLabel}
+              </span>
             ) : (
               <span
                 className="inline-flex w-full min-w-[12rem] cursor-not-allowed select-none items-center justify-center rounded-full bg-[#6054FF]/45 px-6 py-3 text-base font-semibold text-white/90 opacity-90 shadow-none"
@@ -102,6 +119,9 @@ export default function AgendaSection() {
           </h2>
           <p className="mt-4 text-base leading-7 text-[#5F6275] md:text-lg">
             {agendaContent.intro}
+          </p>
+          <p className="mt-4 rounded-2xl border border-[#E3E6F0] bg-white px-4 py-3 text-sm leading-6 text-[#5F6275] md:text-base">
+            {agendaContent.registrationNote}
           </p>
         </div>
 

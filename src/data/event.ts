@@ -31,6 +31,7 @@ export const navItems = [
   { label: "Sessions", href: "#info-sessions" },
   { label: "Agenda", href: "#final-day-agenda" },
   { label: "Judges", href: "#judges" },
+  { label: "Volunteer", href: "#volunteer" },
   { label: "FAQ", href: "#faq" },
   { label: "Sponsor", href: "#organiser" },
 ];
@@ -126,33 +127,39 @@ export const highlightsContent = {
 };
 
 export const agendaContent = {
-  eyebrow: "Competition Journey",
-  title: "A clear path from first step to Final Day",
+  eyebrow: "Registration Journey",
+  title: "Choose how you want to join the competition",
   intro:
-    "Follow the key milestones from info sessions and workshops through to submission and live pitching.",
+    "Whether you are applying as a competitor or attending selected sessions, here is the clearest path to join.",
+  registrationNote:
+    "If you are applying as a competitor, complete the competition registration form first. Within the Google Form, you can indicate which eligible sessions you would like to attend.",
   timelineTitle: "Key stages",
   timeline: [
     {
       step: "01",
       date: "10 Apr 2026",
       title: "Online Info Session",
-      format: "Online",
+      format: "Online · Free · 7:00 – 8:00 PM",
       description:
-        "A free introductory session covering the competition format, key dates, judging expectations, and how to get started.",
+        "Open to everyone, including prospective competitors and general attendees. Learn about the competition format, timeline, judging expectations, and how to get started.",
+      eligibilityNote:
+        "You do not need to register as a competitor to attend this session.",
       registerHref: CTA_LINKS.infoSession,
-      registerLabel: "Register",
+      registerLabel: "Register for Free",
       isDeadline: false,
     },
     {
       step: "02",
       date: "18 Apr 2026",
       title: "Onsite Team-Up Session",
-      format: "In person",
+      format: "In person · Competitor-only",
       description:
-        "A free in-person session for meeting potential collaborators, learning more about the competition, and forming cross-disciplinary teams.",
+        "Designed for registered competitors who want to meet collaborators, exchange ideas, and form teams before submission.",
+      eligibilityNote:
+        "Only available to competition applicants. You can indicate your interest after submitting the competition registration form.",
       registerHref: "",
-      registerLabel: "Coming Soon",
-      comingSoon: true,
+      registerLabel: "Included with Competition Registration",
+      statusOnly: true,
       isDeadline: false,
     },
     {
@@ -162,42 +169,23 @@ export const agendaContent = {
       format: "Hybrid",
       description:
         "A practical workshop on how to structure, present, and communicate technical ideas effectively.",
-      registerHref: "",
-      registerLabel: "Coming Soon",
-      comingSoon: true,
+      eligibilityNote:
+        "Free for registered competitors. Non-competitors may attend by purchasing a separate ticket.",
+      registerHref: CTA_LINKS.pitchWorkshop,
+      registerLabel: "Buy Tickets",
       isDeadline: false,
     },
     {
       step: "04",
-      date: "24 Apr 2026",
-      title: "Draft Submission",
-      format: "Submission Deadline",
-      description:
-        "Teams submit a 5-page draft deck and a short demo progress update for review and shortlisting.",
-      registerHref: "",
-      registerLabel: "",
-      isDeadline: true,
-    },
-    {
-      step: "05",
-      date: "1 May 2026",
-      title: "Final Submission",
-      format: "Submission Deadline",
-      description:
-        "Teams finalise and submit their full pitch deck and prototype or concept demonstration materials.",
-      registerHref: "",
-      registerLabel: "",
-      isDeadline: true,
-    },
-    {
-      step: "06",
       date: "9 May 2026",
       title: "Final Pitch Day",
       format: "Live Event",
       description:
-        "Shortlisted teams pitch live, followed by awards, audience engagement, and networking.",
+        "Watch shortlisted teams pitch live, followed by awards, audience engagement, and networking.",
+      eligibilityNote:
+        "Free for registered competitors. Non-competitors may attend by purchasing an audience ticket.",
       registerHref: CTA_LINKS.audience,
-      registerLabel: "Register as Audience",
+      registerLabel: "Buy Tickets",
       isDeadline: false,
     },
   ],
@@ -493,9 +481,9 @@ export const infoSessionsContent = {
 
 export const pastEventsContent = {
   eyebrow: "Past Events & Community",
-  title: "A glimpse of the community behind the event",
+  title: "A community built around ideas, collaboration, and momentum",
   description:
-    "Use this section to show real event atmosphere, community energy, and the kind of engagement participants can expect around the competition.",
+    "Beyond the competition itself, the event brings together students, builders, researchers, and community partners in a setting designed for connection, exchange, and shared ambition.",
   note: "",
   items: [
     {
@@ -506,35 +494,35 @@ export const pastEventsContent = {
       size: "hero",
     },
     {
-      title: "Networking and connections",
+      title: "Networking",
       subtitle: "",
       src: "/community/event-photo4.jpg",
       placeholder: "[PAST_EVENT_IMAGE_2]",
       size: "tall",
     },
     {
-      title: "Talks and panel moments",
+      title: "Community moments",
       subtitle: "",
       src: "/community/event-photo5.jpg",
       placeholder: "[PAST_EVENT_IMAGE_3]",
       size: "wide",
     },
     {
-      title: "Event highlights",
+      title: "Networking",
       subtitle: "",
       src: "/community/event-photo1.png",
       placeholder: "[PAST_EVENT_IMAGE_4]",
       size: "standard",
     },
     {
-      title: "Audience atmosphere",
+      title: "Community moments",
       subtitle: "",
       src: "/community/event-photo2.png",
       placeholder: "[PAST_EVENT_IMAGE_5]",
       size: "standard",
     },
     {
-      title: "Team and community energy",
+      title: "Community moments",
       subtitle: "",
       src: "/community/event-photo6.jpg",
       placeholder: "[PAST_EVENT_IMAGE_6]",
