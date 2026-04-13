@@ -1,7 +1,7 @@
 /** Central registration and CTA URLs. Use `isCtaLive` for TBD / coming-soon states. */
 export const CTA_LINKS = {
   compete: "https://lnkd.in/gkMAcSXj",
-  infoSession: "https://lnkd.in/g9YDKz_R",
+  infoSession: "https://youtu.be/Q8sSMAa4vbw",
   teamUp: "TBD",
   pitchWorkshop: "https://luma.com/yw85rxee",
   audience: "https://luma.com/27lmvnsj",

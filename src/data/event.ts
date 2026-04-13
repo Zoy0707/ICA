@@ -17,7 +17,7 @@ export const eventMeta = {
     href: CTA_LINKS.compete,
   },
   secondaryCta: {
-    label: "Join Info Session",
+    label: "Watch Info Session Recording",
     href: CTA_LINKS.infoSession,
   },
   sponsorCta: {
@@ -141,11 +141,11 @@ export const agendaContent = {
       title: "Online Info Session",
       format: "Online · Free · 7:00 – 8:00 PM",
       description:
-        "Open to everyone, including prospective competitors and general attendees. Learn about the competition format, timeline, judging expectations, and how to get started.",
+        "Watch the recorded info session for an overview of the competition format, timeline, judging expectations, and how to get started.",
       eligibilityNote:
-        "You do not need to register as a competitor to attend this session.",
+        "Open to everyone. No competition registration is required to watch the recording.",
       registerHref: CTA_LINKS.infoSession,
-      registerLabel: "Register for Free",
+      registerLabel: "Watch Info Session Recording",
       isDeadline: false,
     },
     {
@@ -343,7 +343,7 @@ export const footerContent = {
     href: CTA_LINKS.compete,
   },
   secondaryCta: {
-    label: "Join Info Session",
+    label: "Watch Info Session Recording",
     href: CTA_LINKS.infoSession,
   },
   contactTitle: "For partnerships, sponsorships, or general enquiries",
