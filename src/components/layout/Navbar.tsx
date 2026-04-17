@@ -5,7 +5,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#E3E6F0]/80 bg-white/70 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between gap-4">
-        <a href="#top" className="min-w-0">
+        <a
+          href="https://innovateconnectalliance.org/"
+          target="_blank"
+          rel="noreferrer"
+          className="min-w-0"
+        >
           <img
             src={brandAssets.icaLogo.src}
             alt={brandAssets.icaLogo.name}
