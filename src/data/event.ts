@@ -245,12 +245,12 @@ export const agendaContent = {
   finalDayAgendaTitle: "Final Pitch Day · 9 May 2026",
   finalDayAgenda: [
     {
-      time: "13:00–13:30",
+      time: "13:00-13:30",
       title: "Opening Ceremony",
       description: "Opening of Final Pitch Day",
     },
     {
-      time: "13:30–14:30",
+      time: "13:30-14:30",
       title: "Final Pitch Session (Top Teams)",
       description:
         "",
@@ -261,7 +261,7 @@ export const agendaContent = {
       description: "",
     },
     {
-      time: "14:45 -15:15",
+      time: "14:45-15:15",
       title: "Awards & Closing",
       description: "Recognising top teams and closing the event with a final celebration.",
     },
