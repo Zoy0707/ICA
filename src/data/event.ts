@@ -245,42 +245,30 @@ export const agendaContent = {
   finalDayAgendaTitle: "Final Pitch Day · 9 May 2026",
   finalDayAgenda: [
     {
-      time: "14:00–14:15",
-      title: "Opening Remarks",
+      time: "13:00–13:30",
+      title: "Opening Ceremony",
       description: "Opening of Final Pitch Day",
     },
     {
-      time: "14:15–14:30",
-      title: "Industry Insight Talk",
+      time: "13:30–14:30",
+      title: "Final Pitch Session (Top Teams)",
       description:
-        "A short industry talk exploring the current landscape and future direction of engineering and innovation.",
+        "",
     },
     {
-      time: "14:30–15:45",
-      title: "First Pitching Session",
+      time: "14:30-14:45",
+      title: "Industry Insight & Sponsor Acknowledgement",
       description: "",
     },
     {
-      time: "15:45–16:00",
-      title: "Break",
-      description: "15-minute intermission",
+      time: "14:45 -15:15",
+      title: "Awards & Closing",
+      description: "Recognising top teams and closing the event with a final celebration.",
     },
     {
-      time: "16:00–17:00",
-      title: "Second Pitching Session",
+      time: "15:15-16:00",
+      title: "Networking & Sponsor Interaction",
       description: "",
-    },
-    {
-      time: "17:00–17:15",
-      title: "Industry Reflection Talk",
-      description:
-        "A closing industry perspective on innovation, collaboration, and future opportunities.",
-    },
-    {
-      time: "17:15–17:45",
-      title: "Awards and Closing Celebration",
-      description:
-        "Recognising top teams and closing the event with a final celebration.",
     },
   ],
 };
