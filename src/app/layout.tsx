@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: '<meta name="google-site-verification" content="of8U4HofWREi0Im5SZOhD30OLvHeIcDGYCvNBLba3KI" />'
+  },
   metadataBase: new URL("https://YOUR-PROJECT.vercel.app"),
   title: {
     default: "UoM Engineering & IT Innovation Competition 2026",
