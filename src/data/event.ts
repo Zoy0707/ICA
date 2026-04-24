@@ -309,6 +309,49 @@ export const judgesContent = {
   note: "More judges and guests may be announced.",
 };
 
+export const openingSpeakersContent = {
+  eyebrow: "Opening Speakers",
+  title: "Opening Speakers",
+  speakers: [
+    {
+      name: "UoM Representative",
+      subtitle: "HoS / HoD, The University of Melbourne",
+      topic: "Acknowledgement of Country and school / department welcome",
+      imageSrc: "/opening-speakers/placeholder.png",
+    },
+    {
+      name: "Prof. Lihai Zhang",
+      subtitle:
+        "Discipline Leader, Engineering Management, The University of Melbourne · Co-chair, ICA",
+      topic: "Welcome speech on behalf of ICA",
+      imageSrc: "/opening-speakers/lihai-zhang.jpeg",
+    },
+    {
+      name: "Cr Gladys Liu",
+      subtitle:
+        "City of Melbourne Councillor · Invest Melbourne Advisory Board Member",
+      topic:
+        "City of Melbourne's commitment to the innovation ecosystem and Invest Melbourne's vision for supporting deep-tech startups and student founders in Melbourne",
+      imageSrc: "/opening-speakers/gladys-liu.jpeg",
+    },
+    {
+      name: "Dr Yew-Chin Koay FIEAust CPEng NER",
+      subtitle:
+        "2025 Professional Engineer of the Year · Senior Structural Engineering Advisor, Major Road Projects Victoria",
+      topic:
+        "Engineering innovation and commercialisation from the perspectives of Engineers Australia and Victorian infrastructure delivery",
+      imageSrc: "/opening-speakers/yew-chin-koay.jpeg",
+    },
+    {
+      name: "Prof. Eduard Hovy",
+      subtitle: "Executive Director, Melbourne Connect",
+      topic:
+        "Melbourne Connect's role in advancing research, innovation and commercialisation",
+      imageSrc: "/opening-speakers/eduard-hovy.jpeg",
+    },
+  ],
+} as const;
+
 export const organiserContent = {
   eyebrow: "Organiser",
   title: "Organiser",
