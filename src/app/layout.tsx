@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Innovate Connect Alliance",
   ],
   verification: {
-    google: "of8U4HofWREi0Im5SZOhD300LvHeIcDGYCvNBLba3KI",
+    google: "of8U4HofWREi0Im5SZOhD30OLvHeIcDGYCvNBLba3KI"
   },
   openGraph: {
     title: "UoM Engineering & IT Innovation Competition 2026",
