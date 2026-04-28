@@ -1,4 +1,4 @@
-import { agendaContent, eventMeta } from "@/data/event";
+import { agendaContent } from "@/data/event";
 import { CTA_LINKS } from "@/data/ctaLinks";
 
 type TimelineItem = {
@@ -61,7 +61,9 @@ function TimelineCard({ item }: { item: TimelineItem }) {
 
             {item.isDeadline && (
               <span className="mt-4 inline-flex items-center rounded-full border border-[#8BB082]/40 bg-[#8BB082]/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-[#171727]">
-                Submission Deadline
+                {item.statusOnly && item.registerLabel
+                  ? item.registerLabel
+                  : "Submission Deadline"}
               </span>
             )}
           </div>
@@ -252,14 +254,12 @@ export default function AgendaSection() {
                     {agendaContent.pricing.competitor.price}
                   </div>
                 </div>
-                <a
-                  href={eventMeta.primaryCta.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex w-full min-h-[44px] items-center justify-center rounded-full bg-[#6054FF] px-6 py-3 text-base font-semibold !text-white shadow-[0_14px_34px_rgba(96,84,255,0.35)] transition hover:bg-[#622BCF] hover:!text-white"
+                <span
+                  className="inline-flex w-full min-h-[44px] cursor-not-allowed select-none items-center justify-center rounded-full bg-[#6054FF]/40 px-6 py-3 text-base font-semibold text-white/90"
+                  aria-disabled="true"
                 >
-                  Apply to Compete
-                </a>
+                  Applications Closed
+                </span>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ export default function AgendaSection() {
                   rel="noreferrer"
                   className="inline-flex w-full min-h-[44px] items-center justify-center rounded-full border border-[#6054FF]/35 bg-white px-5 py-2.5 text-sm font-semibold text-[#6054FF] shadow-[0_10px_26px_rgba(96,84,255,0.12)] transition hover:border-[#622BCF]/50 hover:bg-[#6054FF]/5 sm:w-auto sm:min-w-[12rem]"
                 >
-                  Register as Audience
+                  Buy Ticket
                 </a>
               </div>
 

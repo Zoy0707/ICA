@@ -1,9 +1,9 @@
-import { CTA_LINKS } from "./ctaLinks";
+import { CTA_LINKS, SOCIAL_LINKS } from "./ctaLinks";
 
 export const eventMeta = {
   title: "UoM Engineering & IT Innovation Competition 2026",
   subtitle:
-    "A cross-disciplinary innovation challenge bringing together students, recent graduates, and early-stage builders to turn bold ideas into practical solutions.",
+    "Join Final Pitch Day to watch finalist teams present live, hear opening speakers and industry guests, and experience awards plus networking with the university innovation community.",
   date: "9 May 2026",
   time: "14:00–17:45",
   venue: "University of Melbourne, Parkville Campus",
@@ -13,8 +13,8 @@ export const eventMeta = {
   supporters: ["SEEYA", "UoMCAN"],
   competitionDeadline: "11:59 PM, 10 April 2026",
   primaryCta: {
-    label: "Apply to Compete",
-    href: CTA_LINKS.compete,
+    label: "Buy Pitch Day Ticket",
+    href: CTA_LINKS.audience,
   },
   secondaryCta: {
     label: "Watch Info Session Recording",
@@ -38,21 +38,21 @@ export const navItems = [
 
 export const overviewContent = {
   eyebrow: "Why Join",
-  title: "Practical ideas, strong teams, real visibility",
+  title: "A live innovation showcase worth attending in person",
   intro:
-    "A university-backed competition for students and early-stage builders who want to turn ideas into real solutions.",
+    "Final Pitch Day brings together finalist teams, guest speakers, judges, and the wider innovation community for an engaging live event.",
   whyJoinHighlights: [
     {
-      title: "Practical Challenge",
-      body: "Work on ideas that solve real problems and can be clearly tested, explained, and presented.",
+      title: "Live finalist pitches",
+      body: "Watch shortlisted teams present practical ideas and prototypes to judges in a live showcase format.",
     },
     {
-      title: "Cross-Disciplinary Teams",
-      body: "Collaborate with people from different backgrounds and build stronger solutions together.",
+      title: "Speakers and insights",
+      body: "Hear from guest speakers across industry, academia, and innovation throughout Final Pitch Day.",
     },
     {
-      title: "Judge Visibility",
-      body: "Gain feedback and exposure in front of judges, academics, and a wider innovation audience.",
+      title: "Awards and networking",
+      body: "Stay for awards, meet founders and supporters, and connect with Melbourne's innovation community.",
     },
   ],
   competitionThemeEyebrow: "Competition Theme",
@@ -130,9 +130,9 @@ export const agendaContent = {
   eyebrow: "Registration Journey",
   title: "Choose how you want to join the competition",
   intro:
-    "Whether you are applying as a competitor or attending selected sessions, here is the clearest path to join.",
+    "Competition applications are now closed. Here is the clearest path to attend Final Pitch Day and follow key milestones.",
   registrationNote:
-    "If you are applying as a competitor, complete the competition registration form first. Within the Google Form, you can indicate which eligible sessions you would like to attend.",
+    "Final Pitch Day is now open for audience attendance. You can register as an audience member and use the info session recording to understand event flow and judging context.",
   timelineTitle: "Key stages",
   timeline: [
     {
@@ -156,9 +156,9 @@ export const agendaContent = {
       description:
         "Designed for registered competitors who want to meet collaborators, exchange ideas, and form teams before submission.",
       eligibilityNote:
-        "Only available to competition applicants. You can indicate your interest after submitting the competition registration form.",
+        "This session has concluded.",
       registerHref: "",
-      registerLabel: "Included with Competition Registration",
+      registerLabel: "Completed",
       statusOnly: true,
       isDeadline: false,
     },
@@ -170,9 +170,10 @@ export const agendaContent = {
       description:
         "A practical workshop on how to structure, present, and communicate technical ideas effectively.",
       eligibilityNote:
-        "Free for registered competitors. Non-competitors may attend by purchasing a separate ticket.",
-      registerHref: CTA_LINKS.pitchWorkshop,
-      registerLabel: "Buy Tickets",
+        "This workshop has concluded.",
+      registerHref: "",
+      registerLabel: "Event Concluded",
+      statusOnly: true,
       isDeadline: false,
     },
     {
@@ -183,7 +184,8 @@ export const agendaContent = {
       description:
         "Teams submit a 5-page draft deck and a short demo progress update for review and shortlisting.",
       registerHref: "",
-      registerLabel: "",
+      registerLabel: "Completed",
+      statusOnly: true,
       isDeadline: true,
     },
     {
@@ -194,7 +196,8 @@ export const agendaContent = {
       description:
         "Teams finalise and submit their full pitch deck and prototype or concept demonstration materials.",
       registerHref: "",
-      registerLabel: "",
+      registerLabel: "Completed",
+      statusOnly: true,
       isDeadline: true,
     },
     {
@@ -207,7 +210,7 @@ export const agendaContent = {
       eligibilityNote:
         "Free for registered competitors. Non-competitors may attend by purchasing an audience ticket.",
       registerHref: CTA_LINKS.audience,
-      registerLabel: "Buy Tickets",
+      registerLabel: "Buy Pitch Day Ticket",
       isDeadline: false,
     },
   ],
@@ -231,7 +234,7 @@ export const agendaContent = {
       title: "Competitor Pass",
       price: "AUD 25",
       description:
-        "Includes competition participation, Team-Up Info Sessions, Pitch Workshop, and Final Day entry.",
+        "Competition applications are closed for this cycle.",
     },
     audience: {
       title: "Audience Tickets",
@@ -399,47 +402,49 @@ export const organiserContent = {
 };
 
 export const footerContent = {
-  eyebrow: "Ready to join the competition?",
+  eyebrow: "Final Pitch Day",
   title:
-    "Apply now and start building your idea with collaborators, mentors, and judges across disciplines.",
+    "Join us for Final Pitch Day",
   primaryCta: {
-    label: "Apply to Compete",
-    href: CTA_LINKS.compete,
+    label: "Buy Pitch Day Ticket",
+    href: CTA_LINKS.audience,
   },
   secondaryCta: {
     label: "Watch Info Session Recording",
     href: CTA_LINKS.infoSession,
   },
+  description:
+    "Watch finalist teams present live, hear from guest speakers, and connect with the innovation community at the University of Melbourne.",
+  socialLinks: [
+    { label: "LinkedIn", href: SOCIAL_LINKS.linkedIn },
+    { label: "Instagram", href: SOCIAL_LINKS.instagram },
+    { label: "Xiaohongshu", href: SOCIAL_LINKS.xiaohongshu },
+    { label: "WeChat / Other", href: SOCIAL_LINKS.wechatOrOther },
+  ],
   contactTitle: "For partnerships, sponsorships, or general enquiries",
   contactEmail: "admin@innovateconnectalliance.org",
 };
 
 export const faqContent = [
   {
-    question: "Can I apply without a team?",
+    question: "What can audience members expect on Final Pitch Day?",
     answer:
-      "Yes. Individual applications are welcome, and participants can form teams during the onsite Team-Up Session.",
+      "You can watch finalist pitches, hear opening speakers and industry insights, and join the awards plus networking session.",
   },
   {
-    question:
-      "What is the difference between the Info Session and the Team-Up Session?",
+    question: "Do I need to be a competitor to attend?",
     answer:
-      "The Online Info Session introduces the competition format and key details. The Onsite Team-Up Session is designed for networking, idea exchange, and team formation.",
+      "No. Audience attendance is open and welcomed. You can register as an audience member for Final Pitch Day.",
   },
   {
-    question: "Is the Pitch Workshop available online?",
+    question: "Will there be networking opportunities?",
     answer:
-      "Yes. The Pitch Workshop will be offered in a hybrid format, with both onsite and online participation options.",
-  },
-  {
-    question: "What needs to be submitted for the draft round?",
-    answer:
-      "Teams need to submit a 5-page draft pitch deck together with a short demo progress update.",
+      "Yes. Final Pitch Day includes networking after the live judging and awards segments.",
   },
   {
     question: "Where will the Final Pitch Day be held?",
     answer:
-      "The event will take place at the University of Melbourne, Parkville Campus. Exact venue details will be announced closer to the date.",
+      "The event will take place at the University of Melbourne, Parkville Campus.",
   },
 ];
 
@@ -494,12 +499,12 @@ export const heroV2Content = {
       description: "Hosted by the University of Melbourne FEIT",
     },
     {
-      title: "Individuals and teams",
-      description: "Open to solo applicants and existing teams",
+      title: "Audience welcome",
+      description: "Open to students, founders, and the wider community",
     },
     {
-      title: "Team-up support",
-      description: "Join the Team-Up Info Session to connect with others",
+      title: "Community connection",
+      description: "Experience finalist pitches, awards, and networking live",
     },
   ],
   visualCards: [
@@ -529,15 +534,15 @@ export const heroV2Content = {
 };
 
 export const infoSessionsContent = {
-  eyebrow: "Team-Up Info Sessions",
-  title: "Choose a session and take the first step",
+  eyebrow: "Info Session Resources",
+  title: "Catch up and stay event-ready",
   description:
-    "Designed for solo applicants, curious builders, and anyone who wants a clearer path into the competition before applying.",
-  helperTitle: "Why attend",
+    "Use these resources to understand the competition journey, event flow, and what to expect on Final Pitch Day.",
+  helperTitle: "Why watch",
   helperPoints: [
-    "Meet potential teammates and cross-disciplinary collaborators",
-    "Ask practical questions about the competition format and process",
-    "Choose the session option that best fits your schedule and format preference",
+    "Understand the timeline and judging process before Final Pitch Day",
+    "Get context on event format, speakers, and audience experience",
+    "Prepare key details before registering to attend",
   ],
   sessions: [
     {
@@ -547,7 +552,7 @@ export const infoSessionsContent = {
       time: "TBA",
       format: "Online",
       description:
-        "An online introduction to the competition, including key dates, participation format, judging expectations, and how to get started.",
+        "A recorded overview of the competition format, key dates, judging expectations, and what to expect on Final Pitch Day.",
       registerHref: CTA_LINKS.infoSession,
       registerLinkPlaceholder: "",
     },
@@ -558,7 +563,7 @@ export const infoSessionsContent = {
       time: "TBA",
       format: "In person",
       description:
-        "Meet potential collaborators in person, exchange ideas, and form cross-disciplinary teams ahead of submission.",
+        "This in-person team-up session has concluded and is kept here for timeline reference.",
       registerHref: CTA_LINKS.teamUp,
       registerLinkPlaceholder: "",
     },

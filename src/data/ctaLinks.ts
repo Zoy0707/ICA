@@ -8,6 +8,13 @@ export const CTA_LINKS = {
   sponsorPackage: "/files/ICA-Sponsorship-Package.pdf",
 } as const;
 
+export const SOCIAL_LINKS = {
+  linkedIn: "https://www.linkedin.com/company/innovateconnect-alliance",
+  instagram: "TBD",
+  xiaohongshu: "TBD",
+  wechatOrOther: "TBD",
+} as const;
+
 export function isCtaLive(href: string): boolean {
   return Boolean(href) && href !== "TBD";
 }

@@ -1,4 +1,5 @@
 import { footerContent } from "@/data/event";
+import { isCtaLive } from "@/data/ctaLinks";
 
 export default function FooterCtaSection() {
   return (
@@ -12,6 +13,9 @@ export default function FooterCtaSection() {
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
             {footerContent.title}
           </h2>
+          <p className="mt-4 text-base leading-7 text-white/75">
+            {footerContent.description}
+          </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -34,6 +38,29 @@ export default function FooterCtaSection() {
           </div>
 
           <div className="mt-10 border-t border-white/12 pt-8">
+            <div className="mb-6 flex flex-wrap items-center gap-2">
+              {footerContent.socialLinks.map((link) =>
+                isCtaLive(link.href) ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/90 transition hover:border-white/30 hover:bg-white/10"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <span
+                    key={link.label}
+                    className="inline-flex items-center rounded-full border border-white/12 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/45"
+                    aria-disabled="true"
+                  >
+                    {link.label}
+                  </span>
+                ),
+              )}
+            </div>
             <p className="text-sm text-white/65">
               {footerContent.contactTitle}
             </p>

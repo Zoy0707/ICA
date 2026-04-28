@@ -54,14 +54,14 @@ export default function HeroSection() {
 
   const activeVisual = visuals[activeVisualIndex] ?? visuals[0];
   const quickHighlights = [
-    { title: "University-backed", description: "Hosted by UoM FEIT" },
+    { title: "Live finalist pitches", description: "Watch top teams present in person" },
     {
-      title: "Individuals and teams",
-      description: "Open to solo applicants and teams",
+      title: "Speakers and insights",
+      description: "Hear guest perspectives from industry and academia",
     },
     {
-      title: "Team-up support",
-      description: "Meet collaborators through the Info Session",
+      title: "Awards and networking",
+      description: "Join the celebration and connect with the community",
     },
   ];
 
@@ -254,7 +254,7 @@ export default function HeroSection() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center self-start whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-sm font-medium !text-[#510A6B] shadow-[0_16px_42px_rgba(0,0,0,0.18)] transition hover:bg-[#F1F2FA]"
                 >
-                  Register as Audience
+                  Buy Pitch Day Ticket
                 </a>
               </div>
             </div>
