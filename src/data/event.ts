@@ -275,38 +275,71 @@ export const agendaContent = {
 
 export const judgesContent = {
   eyebrow: "Judges",
-  title: "Meet the confirmed judging panel",
+  title: "Confirmed Judges",
   intro:
     "The judging panel brings together academic, technical, and research perspectives relevant to innovation, engineering, and applied technology.",
-  judges: [
+  judges: [] as {
+    name: string;
+    title: string;
+    expertise: string;
+    imageSrc?: string;
+    imagePlaceholder: string;
+  }[],
+  additionalJudges: [
+    {
+      name: "Ms Kathy Coultas",
+      subtitle:
+        "A Leader, Advocate and Advisor connecting Business, Government and Community",
+      imageSrc: "/judges/kathy-coultas.jpeg",
+      imagePlaceholder: "[KATHY_COULTAS]",
+    },
+    {
+      name: "Jeanette Cheah",
+      subtitle: "HEX",
+      badge: "HEX Choice Award · 1:1 Feedback",
+      imageSrc: "/judges/jeanette-cheah.jpeg",
+      imagePlaceholder: "[JEANETTE_CHEAH]",
+    },
+    {
+      name: "Dr. Shuangmin Shi",
+      subtitle:
+        "Lecturer in Engineering Management, The University of Melbourne",
+      imageSrc: "/judges/shuangmin-shi.jpeg",
+      imagePlaceholder: "[SHUANGMIN_SHI]",
+    },
+    {
+      name: "Dr. Golnar Khomami",
+      subtitle: "Optus",
+      imageSrc: "/judges/golnar-khomami.jpeg",
+      imagePlaceholder: "[GOLNAR_KHOMAMI]",
+    },
+    {
+      name: "Dr. Suryani Lim",
+      subtitle: "Federation University",
+      imageSrc: "/judges/suryani-lim.jpeg",
+      imagePlaceholder: "[SURYANI_LIM]",
+    },
+    {
+      name: "Dr. Pooria Pasbakhsh",
+      subtitle:
+        "R&D Material Scientist · Research Fellow and Adjunct Associate Professor",
+      imageSrc: "/judges/pooria-pasbakhsh.jpeg",
+      imagePlaceholder: "[POORIA_PASBAKHSH]",
+    },
+    {
+      name: "Tim Tso",
+      subtitle: "EdTex · Founder & President, Cambridge EdTech Society",
+      imageSrc: "/judges/tim-tso.jpeg",
+      imagePlaceholder: "[TIM_TSO]",
+    },
     {
       name: "Yifei Wang",
-      title:
+      subtitle:
         "Founder, AIBUILD & Global Elite School\nAcademic, University of Melbourne",
-      expertise:
-        "AI product strategy, applied innovation, and commercialisation",
       imageSrc: "/judges/yifei-wang.jpeg",
-      imagePlaceholder: "[JUDGE_IMAGE_1]",
-    },
-    {
-      name: "Shuangmin Shi",
-      title: "Lecturer in Engineering Management\nThe University of Melbourne",
-      expertise:
-        "Engineering management, systems thinking, and innovation education",
-      imageSrc: "/judges/shuangmin-shi.jpeg",
-      imagePlaceholder: "[JUDGE_IMAGE_2]",
-    },
-    {
-      name: "Pooria Pasbakhsh",
-      title:
-        "R&D Material Scientist\nResearch Fellow and Adjunct Associate Professor",
-      expertise:
-        "Materials research, technical evaluation, and interdisciplinary research translation",
-      imageSrc: "/judges/pooria-pasbakhsh.jpeg",
-      imagePlaceholder: "[JUDGE_IMAGE_3]",
+      imagePlaceholder: "[YIFEI_WANG]",
     },
   ],
-  note: "More judges and guests may be announced.",
 };
 
 export const openingSpeakersContent = {
