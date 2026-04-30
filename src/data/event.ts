@@ -291,14 +291,13 @@ export const judgesContent = {
   additionalJudges: [
     {
       name: "Ms Kathy Coultas",
-      subtitle:
-        "A Leader, Advocate and Advisor connecting Business, Government and Community",
+      subtitle: "Former ICT Director, Victoria Government",
       imageSrc: "/judges/kathy-coultas.jpeg",
       imagePlaceholder: "[KATHY_COULTAS]",
     },
     {
       name: "Jeanette Cheah",
-      subtitle: "HEX",
+      subtitle: "CEO & Co-Founder, HEX",
       badge: "HEX Choice Award · 1:1 Feedback",
       imageSrc: "/judges/jeanette-cheah.jpeg",
       imagePlaceholder: "[JEANETTE_CHEAH]",
@@ -312,26 +311,28 @@ export const judgesContent = {
     },
     {
       name: "Dr. Golnar Khomami",
-      subtitle: "Optus",
+      subtitle: "Senior Director, Network Technology Standardisation, Optus",
       imageSrc: "/judges/golnar-khomami.jpeg",
       imagePlaceholder: "[GOLNAR_KHOMAMI]",
     },
     {
       name: "Dr. Suryani Lim",
-      subtitle: "Federation University",
+      subtitle:
+        "Senior Lecturer in IT & Research Higher Degree Coordinator, Federation University",
       imageSrc: "/judges/suryani-lim.jpeg",
       imagePlaceholder: "[SURYANI_LIM]",
     },
     {
       name: "Dr. Pooria Pasbakhsh",
       subtitle:
-        "R&D Material Scientist · Research Fellow and Adjunct Associate Professor",
+        "Adjunct Associate Professor & Research Fellow (Materials Upcycling), University of Melbourne",
       imageSrc: "/judges/pooria-pasbakhsh.jpeg",
       imagePlaceholder: "[POORIA_PASBAKHSH]",
     },
     {
       name: "Tim Tso",
-      subtitle: "EdTex · Founder & President, Cambridge EdTech Society",
+      subtitle:
+        "Founder & President, Cambridge EdTech Society (AI & EdTech), University of Cambridge",
       imageSrc: "/judges/tim-tso.jpeg",
       imagePlaceholder: "[TIM_TSO]",
     },
@@ -369,6 +370,13 @@ export const openingSpeakersContent = {
       topic:
         "City of Melbourne's commitment to the innovation ecosystem and Invest Melbourne's vision for supporting deep-tech startups and student founders in Melbourne",
       imageSrc: "/opening-speakers/gladys-liu.jpeg",
+    },
+    {
+      name: "Prof. Guillermo Narsilio Ferrero",
+      subtitle:
+        "Head of Infrastructure Engineering, The University of Melbourne",
+      topic: "",
+      imageSrc: "/opening-speakers/guillermo-narsilio-ferrero.jpeg",
     },
     {
       name: "Dr Yew-Chin Koay FIEAust CPEng NER",

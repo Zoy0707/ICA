@@ -92,6 +92,15 @@ export default function OrganiserSection() {
     },
   ];
 
+  const goldSponsorLogos: SupportingLogoItem[] = [
+    {
+      name: "ACASE",
+      shortName: "ACASE",
+      src: "/logos/acase-logo-1.jpg",
+      href: "https://www.acase.org.au/",
+    },
+  ];
+
   const communityPartnerLogos: SupportingLogoItem[] = [
     {
       name: "MLAI",
@@ -109,21 +118,15 @@ export default function OrganiserSection() {
       shortName: brandAssets.supporterLogos[0].shortName,
       src: brandAssets.supporterLogos[0].src,
     },
-  ];
-
-  const supportingSponsorLogos: SupportingLogoItem[] = [
-    {
-      name: "ACASE",
-      shortName: "ACASE",
-      src: "/logos/acase-logo-1.jpg",
-      href: "https://www.acase.org.au/",
-    },
     {
       name: brandAssets.supporterLogos[1].name,
       shortName: brandAssets.supporterLogos[1].shortName,
       src: "/logos/UoMCAN-logo.png",
       href: "https://uomcan.org/",
     },
+  ];
+
+  const supportingSponsorLogos: SupportingLogoItem[] = [
     {
       name: brandAssets.additionalPartners[0].name,
       shortName: brandAssets.additionalPartners[0].shortName,
@@ -159,6 +162,15 @@ export default function OrganiserSection() {
                 logos={diamondSponsor}
                 logoClassName="h-20 w-auto object-contain opacity-100 md:h-24 lg:h-28"
               />
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#5F6275]">
+              Gold Sponsor
+            </p>
+            <div className="mt-4">
+              <SupportingLogoRow logos={goldSponsorLogos} />
             </div>
           </div>
 
