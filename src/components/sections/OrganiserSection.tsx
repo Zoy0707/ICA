@@ -113,6 +113,12 @@ export default function OrganiserSection() {
 
   const supportingSponsorLogos: SupportingLogoItem[] = [
     {
+      name: "ACASE",
+      shortName: "ACASE",
+      src: "/logos/acase-logo-1.jpg",
+      href: "https://www.acase.org.au/",
+    },
+    {
       name: brandAssets.supporterLogos[1].name,
       shortName: brandAssets.supporterLogos[1].shortName,
       src: "/logos/UoMCAN-logo.png",
@@ -151,7 +157,7 @@ export default function OrganiserSection() {
             <div className="mt-4 border-b border-[#E3E6F0] pb-7 md:pb-8">
               <SupportingLogoRow
                 logos={diamondSponsor}
-                logoClassName="h-24 w-auto object-contain opacity-100 md:h-28 lg:h-32"
+                logoClassName="h-20 w-auto object-contain opacity-100 md:h-24 lg:h-28"
               />
             </div>
           </div>
