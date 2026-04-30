@@ -5,7 +5,7 @@ export const eventMeta = {
   subtitle:
     "Join Final Pitch Day to watch finalist teams present live, hear opening speakers and industry guests, and experience awards plus networking with the university innovation community.",
   date: "9 May 2026",
-  time: "14:00–17:45",
+  time: "13:00–16:00",
   venue: "University of Melbourne, Parkville Campus",
   venueSuffix: "Venue TBA",
   hostedBy: "Hosted by the University of Melbourne FEIT",
