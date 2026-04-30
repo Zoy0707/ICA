@@ -170,7 +170,9 @@ export default function OrganiserSection() {
               Gold Sponsor
             </p>
             <div className="mt-4">
-              <SupportingLogoRow logos={goldSponsorLogos} />
+              <SupportingLogoRow logos={goldSponsorLogos} 
+              logoClassName="h-18 w-auto object-contain md:h-22 lg:h-26"
+              />
             </div>
           </div>
 

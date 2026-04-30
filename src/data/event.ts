@@ -351,12 +351,6 @@ export const openingSpeakersContent = {
   title: "Opening Speakers",
   speakers: [
     {
-      name: "UoM Representative",
-      subtitle: "HoS / HoD, The University of Melbourne",
-      topic: "Acknowledgement of Country and school / department welcome",
-      imageSrc: "/opening-speakers/placeholder.png",
-    },
-    {
       name: "Prof. Lihai Zhang",
       subtitle:
         "Discipline Leader, Engineering Management, The University of Melbourne · Co-chair, ICA",
