@@ -10,6 +10,8 @@ type SupportingLogoItem = {
   src: string;
   /** External site; opens in a new tab when set. */
   href?: string;
+  /** Overrides the row-level logoClassName for this logo only. */
+  logoClassName?: string;
 };
 
 function SupportingLogoRow({
@@ -22,11 +24,12 @@ function SupportingLogoRow({
   return (
     <div className="flex flex-wrap items-center gap-x-12 gap-y-6 md:gap-x-14 md:gap-y-7">
       {logos.map((logo) => {
+        const cls = logo.logoClassName ?? logoClassName;
         const image = logo.src ? (
           <img
             src={logo.src}
             alt={logo.name}
-            className={logoClassName}
+            className={cls}
           />
         ) : (
           <span className="text-sm font-semibold tracking-tight text-[#171727]">
@@ -99,6 +102,11 @@ export default function OrganiserSection() {
       src: "/logos/acase-logo-1.jpg",
       href: "https://www.acase.org.au/",
     },
+    {
+      name: "VIVENEX",
+      shortName: "VIVENEX",
+      src: "/logos/vivenex.jpg",
+    },
   ];
 
   const communityPartnerLogos: SupportingLogoItem[] = [
@@ -142,6 +150,13 @@ export default function OrganiserSection() {
       shortName: "GES",
       src: "/logos/GES-logo.jpg",
       href: "https://globalelite.school/",
+    },
+    {
+      name: "HEX",
+      shortName: "HEX",
+      src: "/logos/hex.svg",
+      href: "https://www.startwithhex.com/",
+      logoClassName: "h-8 w-auto object-contain opacity-95 md:h-10",
     },
   ];
 
