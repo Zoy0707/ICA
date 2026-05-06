@@ -351,6 +351,13 @@ export const openingSpeakersContent = {
   title: "Opening Speakers",
   speakers: [
     {
+      name: "Prof. Guillermo Narsilio Ferrero",
+      subtitle:
+        "Head of Infrastructure Engineering, The University of Melbourne",
+      topic: "",
+      imageSrc: "/opening-speakers/guillermo-narsilio-ferrero.jpeg",
+    },
+    {
       name: "Prof. Lihai Zhang",
       subtitle:
         "Discipline Leader, Engineering Management, The University of Melbourne · Co-chair, ICA",
@@ -364,13 +371,6 @@ export const openingSpeakersContent = {
       topic:
         "City of Melbourne's commitment to the innovation ecosystem and Invest Melbourne's vision for supporting deep-tech startups and student founders in Melbourne",
       imageSrc: "/opening-speakers/gladys-liu.jpeg",
-    },
-    {
-      name: "Prof. Guillermo Narsilio Ferrero",
-      subtitle:
-        "Head of Infrastructure Engineering, The University of Melbourne",
-      topic: "",
-      imageSrc: "/opening-speakers/guillermo-narsilio-ferrero.jpeg",
     },
     {
       name: "Dr Yew-Chin Koay FIEAust CPEng NER",
